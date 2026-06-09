@@ -1,0 +1,163 @@
+[
+ {
+  "q": "Ou se trouve le service de scolarite ?",
+  "lang": "fr",
+  "intent": "stage_pfe",
+  "conf": 0.4384,
+  "resp": "💼 **Stage & PFE à la FSBM** :\n\n**PFE :** projet de fin d'études, 3-4 mois en S6, encadrant FSBM + entreprise, mémoire + soutenance.\n\n**Convention** (étapes) : trouver entreprise → "
+ },
+ {
+  "q": "Comment obtenir une attestation ?",
+  "lang": "fr",
+  "intent": "diplome",
+  "conf": 0.5774,
+  "resp": "🎓 **Retrait du diplôme original :**\n\n**Délai :** 6-12 mois après la fin des études\n**Documents :** CIN + copie, reçu dépôt, 2 photos\n**Où :** Service scolarité (admin, 1er étage)\n\n"
+ },
+ {
+  "q": "Quelles sont les filieres disponibles ?",
+  "lang": "fr",
+  "intent": "filieres",
+  "conf": 0.7565,
+  "resp": "📚 La FSBM propose **7 licences** + **18 masters** :\n\n**Licences :**\n💻 **SMI** Sciences Math & Informatique\n🖥️ **DI** Développement Informatique (pro)\n📊 **SMA** Sciences Math & Appl"
+ },
+ {
+  "q": "Quels sont les modules du semestre ?",
+  "lang": "fr",
+  "intent": "filieres",
+  "conf": 0.5808,
+  "resp": "📚 La FSBM propose **7 licences** + **18 masters** :\n\n**Licences :**\n💻 **SMI** Sciences Math & Informatique\n🖥️ **DI** Développement Informatique (pro)\n📊 **SMA** Sciences Math & Appl"
+ },
+ {
+  "q": "Qui est responsable du departement informatique ?",
+  "lang": "fr",
+  "intent": "filiere_di",
+  "conf": 0.5482,
+  "resp": "🖥️ **DI — Développement Informatique (Licence Pro)**\n\n🎯 Former des développeurs full-stack opérationnels dès la sortie.\n\n📖 **Modules :** HTML/CSS/JS, Angular/React, Node.js, BDD, M"
+ },
+ {
+  "q": "Ou trouver les emplois du temps ?",
+  "lang": "fr",
+  "intent": "emploi_du_temps",
+  "conf": 0.5515,
+  "resp": "📅 **Consulter l'emploi du temps :**\n\n1. **Site officiel** : www.fsbm.ma → Emplois du temps (filière + semestre + groupe)\n2. **Portail ENT** : ent.univh2c.ma (personnalisé selon ton"
+ },
+ {
+  "q": "Quand commencent les examens ?",
+  "lang": "fr",
+  "intent": "examens",
+  "conf": 1.0,
+  "resp": "📝 **Examens à la FSBM :**\n\n**Sessions normales :**\n• Hiver (S1/S3/S5) : ~10-30 janvier\n• Été (S2/S4/S6) : 1-25 juin\n\n**Rattrapage :** 1-15 septembre\n\n**Évaluation :** CC 25% + Exam"
+ },
+ {
+  "q": "Comment s'inscrire a la FSBM ?",
+  "lang": "fr",
+  "intent": "inscription",
+  "conf": 1.0,
+  "resp": "📋 **Inscription FSBM — étapes détaillées :**\n\n**1️⃣ Préinscription en ligne**\nRends-toi sur preins.univh2c.ma. Remplis le formulaire complet (nom, prénom, CIN, email, téléphone, ch"
+ },
+ {
+  "q": "Comment avoir une bourse ?",
+  "lang": "fr",
+  "intent": "bourses",
+  "conf": 1.0,
+  "resp": "💰 **Bourse ONOUSC :**\n\n**Critères :** revenus familiaux modestes + distance du domicile + mention au bac\n**Montants :** 1500-3500 DH/an selon catégorie (versement annuel)\n**Période"
+ },
+ {
+  "q": "Presente la FSBM",
+  "lang": "fr",
+  "intent": "identite_chatbot",
+  "conf": 0.822,
+  "resp": "Je suis le Chatbot Intelligent de la FSBM ! 🤖\n\nJe peux vous aider avec :\n• 📋 Inscription / Réinscription\n• 📚 Filières & Masters\n• 📅 Emplois du temps & Examens\n• 💼 Stages & PFE\n• 💰 "
+ },
+ {
+  "q": "Quelle filiere choisir ?",
+  "lang": "fr",
+  "intent": "filieres",
+  "conf": 1.0,
+  "resp": "📚 La FSBM propose **7 licences** + **18 masters** :\n\n**Licences :**\n💻 **SMI** Sciences Math & Informatique\n🖥️ **DI** Développement Informatique (pro)\n📊 **SMA** Sciences Math & Appl"
+ },
+ {
+  "q": "Comment retirer mon diplome ?",
+  "lang": "fr",
+  "intent": "diplome",
+  "conf": 1.0,
+  "resp": "🎓 **Retrait du diplôme original :**\n\n**Délai :** 6-12 mois après la fin des études\n**Documents :** CIN + copie, reçu dépôt, 2 photos\n**Où :** Service scolarité (admin, 1er étage)\n\n"
+ },
+ {
+  "q": "Je suis stresse pour les examens",
+  "lang": "fr",
+  "intent": "stress_examens",
+  "conf": 0.8007,
+  "resp": "Je te comprends{name_comma}, le stress des examens est très commun. Voici des conseils efficaces :\n\n**🧠 Méthode :**\n• Pomodoro : 25 min de révision + 5 min pause\n• Annales des anné"
+ },
+ {
+  "q": "What are the available programs?",
+  "lang": "en",
+  "intent": "identite_chatbot",
+  "conf": 0.5058,
+  "resp": "I'm the FSBM Smart Chatbot! 🤖\n\nI can help you with:\n• 📋 Registration / Re-enrollment\n• 📚 Programs & Masters\n• 📅 Schedules & Exams\n• 💼 Internships & Final-year projects\n• 💰 Scholars"
+ },
+ {
+  "q": "How do I register at FSBM?",
+  "lang": "en",
+  "intent": "inscription",
+  "conf": 0.4031,
+  "resp": "📋 **FSBM Enrollment — Step-by-step:**\n\n**1️⃣ Online pre-registration**\nGo to preins.univh2c.ma. Fill the form (name, ID, email, phone, program choice: SMI, DI, SMA, SMP, SMC, SV, S"
+ },
+ {
+  "q": "When do the exams start?",
+  "lang": "en",
+  "intent": "diplome",
+  "conf": 0.4709,
+  "resp": "🎓 **Diploma collection:**\n\n**Delay:** 6-12 months after graduation\n**Documents:** ID + copy, deposit receipt, 2 photos\n**Where:** Admissions office (admin, 1st floor)\n\n**Provisiona"
+ },
+ {
+  "q": "Where can I find the timetable?",
+  "lang": "en",
+  "intent": "emploi_du_temps",
+  "conf": 0.4668,
+  "resp": "📅 **Check your timetable:**\n\n1. **Official site:** www.fsbm.ma → Schedules\n2. **ENT portal:** ent.univh2c.ma (personalized)\n3. **Department boards**\n4. **This platform** (Schedule "
+ },
+ {
+  "q": "salam, ki dayer ?",
+  "lang": "darija",
+  "intent": "comment_vas_tu",
+  "conf": 0.9016,
+  "resp": "L7amdulilah {voc}{name_comma} ! 😊 Ana mzyan, jaheh n3awnek f ay haja. O nta{nta_nti}/nti, kif {dayer_dayra} ? Wach kayna chi haja li bghiti tssawel ?"
+ },
+ {
+  "q": "shno hia les filieres ?",
+  "lang": "fr",
+  "intent": "filieres",
+  "conf": 1.0,
+  "resp": "📚 La FSBM propose **7 licences** + **18 masters** :\n\n**Licences :**\n💻 **SMI** Sciences Math & Informatique\n🖥️ **DI** Développement Informatique (pro)\n📊 **SMA** Sciences Math & Appl"
+ },
+ {
+  "q": "kifash ndir l'inscription ?",
+  "lang": "darija",
+  "intent": "inscription",
+  "conf": 0.5722,
+  "resp": "📋 **Tassjil f FSBM — l'étapes b tafassil :**\n\n**1️⃣ Préinscription online :**\nMchi l preins.univh2c.ma o kml lformulaire : smiti, smiya, lcin, lemail, raqm dyal tel, ikhtiyar dyal "
+ },
+ {
+  "q": "fin kayn emploi du temps ?",
+  "lang": "fr",
+  "intent": "emploi_du_temps",
+  "conf": 0.8444,
+  "resp": "📅 **Consulter l'emploi du temps :**\n\n1. **Site officiel** : www.fsbm.ma → Emplois du temps (filière + semestre + groupe)\n2. **Portail ENT** : ent.univh2c.ma (personnalisé selon ton"
+ },
+ {
+  "q": "ana 3ndi stress f les examens",
+  "lang": "darija",
+  "intent": "examens",
+  "conf": 0.3005,
+  "resp": "📝 **Lexams f FSBM — kollchi li khassek t3ref :**\n\n**📅 Sessions kayna 3 :**\n\n**Session Normale - Hiver (Janvier) :**\n• Modules dyal S1, S3, S5 (semestres dyal kharif)\n• Période : ap"
+ },
+ {
+  "q": "chno houwa contact dyal scolarite ?",
+  "lang": "darija",
+  "intent": "contact_scolarite",
+  "conf": 0.9442,
+  "resp": "📞 **Service Scolarité FSBM — toutes informations :**\n\n**📍 Localisation :**\nBâtiment administratif, 1er étage (b 9oddam mn l'entrée principale)\n\n**🕐 Horaires d'ouverture :**\n• **Mat"
+ }
+]

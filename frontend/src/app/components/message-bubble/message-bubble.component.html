@@ -1,0 +1,10 @@
+<div class="message" [class.bot]="message.sender === 'bot'" [class.user]="message.sender === 'user'">
+    <img *ngIf="message.sender === 'bot'" src="assets/logos/dept-math-info.png" alt="Bot" class="message-avatar" />
+    <div class="message-bubble">{{ message.text }}</div>
+    <div class="message-time" [style.textAlign]="message.sender === 'user' ? 'right' : 'left'">{{ formatTime(message.timestamp) }}</div>
+    <div class="feedback-bar" *ngIf="message.sender === 'bot' && message.conversationId && !feedbackGiven">
+      <button class="feedback-btn" (click)="sendFeedback(5)">👍</button>
+      <button class="feedback-btn" (click)="sendFeedback(1)">👎</button>
+    </div>
+    <div class="message-time" *ngIf="feedbackGiven">{{ feedbackGiven >= 4 ? '✅ Merci !' : '📝 Noté, on améliore !' }}</div>
+  </div>

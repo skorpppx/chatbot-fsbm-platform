@@ -1,0 +1,159 @@
+<!-- ═══════ HERO ═══════ -->
+<section class="hero fade-in-up">
+  <div class="hero-content">
+    <div class="hero-badge">
+      <img src="assets/logos/dept-math-info.png" alt="Dept" class="hero-mini-logo" />
+      ✦ Plateforme intelligente FSBM
+    </div>
+    <h1>Bienvenue sur l'<span class="grad-text">assistant intelligent</span> de la FSBM</h1>
+    <p class="hero-sub">
+      Trouvez en un instant toutes les informations sur vos études : filières, modules, examens,
+      stages, vie étudiante. Disponible 24h/24 via un chatbot, ou en navigation directe.
+    </p>
+    <div class="hero-actions">
+      <a routerLink="/chat" class="btn btn-accent">
+        <span>🤖</span> Démarrer une conversation
+      </a>
+      <a routerLink="/filieres" class="btn btn-ghost">
+        Explorer les filières →
+      </a>
+    </div>
+  </div>
+  <div class="hero-visual">
+    <div class="hero-blob"></div>
+    <img src="assets/logos/fsbm.png" alt="FSBM" class="hero-logo" />
+  </div>
+</section>
+
+<!-- ═══════ BACKEND OFFLINE ═══════ -->
+<div *ngIf="!backendOnline()" class="warning-banner fade-in-up">
+  ⚠️ Le backend FastAPI n'est pas joignable.
+  Lance <code>py -m uvicorn app.main:app --port 8002</code> dans <code>services/academic-service/</code>.
+</div>
+
+<!-- ═══════ STATS GRID ═══════ -->
+<section class="section">
+  <div class="section-header">
+    <h2>Vue d'ensemble en temps réel</h2>
+    <p>Données live depuis l'academic-service · {{ overview() ? 'En ligne' : 'Chargement...' }}</p>
+  </div>
+  <div class="grid grid-4">
+    <a *ngFor="let s of stats; let i = index"
+       [routerLink]="s.route || null"
+       class="stat-card"
+       [class.clickable]="s.route"
+       [class.accent]="s.color === 'accent'"
+       [style.animation-delay.ms]="i * 50">
+      <div class="stat-icon">{{ s.icon }}</div>
+      <div class="stat-content">
+        <div class="stat-value">
+          <span *ngIf="!loading() || overview()">{{ s.value }}</span>
+          <span *ngIf="loading() && !overview()" class="skeleton stat-skel"></span>
+        </div>
+        <div class="stat-label">{{ s.label }}</div>
+        <div class="stat-delta" *ngIf="s.delta">{{ s.delta }}</div>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- ═══════ MOT DU DOYEN ═══════ -->
+<section class="section" *ngIf="doyenMessage">
+  <div class="section-header">
+    <h2>👤 Mot du Doyen</h2>
+    <p>Message officiel de la direction de la faculté</p>
+  </div>
+  <div class="fade-in-up"
+       style="background:linear-gradient(135deg,#1C3F6E,#2d5a9e); color:#fff; border-radius:16px;
+              padding:26px 30px; display:flex; gap:22px; align-items:flex-start;">
+    <div style="font-size:2.6rem; line-height:1; flex-shrink:0;">🎓</div>
+    <div>
+      <p style="margin:0 0 14px; line-height:1.68; font-size:.97rem; font-style:italic; opacity:.97;">
+        « {{ doyenMessage }} »
+      </p>
+      <div style="font-weight:700; font-size:1.02rem;">{{ doyen }}</div>
+      <div style="opacity:.85; font-size:.84rem;">Doyen de la Faculté des Sciences Ben M'Sick</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ QUICK ACTIONS ═══════ -->
+<section class="section">
+  <div class="section-header">
+    <h2>Actions rapides</h2>
+    <p>Accédez directement aux fonctionnalités les plus utiles</p>
+  </div>
+  <div class="grid grid-4">
+    <a *ngFor="let q of quickActions; let i = index"
+       [routerLink]="q.route"
+       class="action-card fade-in-up"
+       [style.animation-delay.ms]="i * 60">
+      <span class="action-icon">{{ q.icon }}</span>
+      <span class="action-label">{{ q.label }}</span>
+      <span class="action-arrow">→</span>
+    </a>
+  </div>
+</section>
+
+<!-- ═══════ ANNOUNCEMENTS + EVENTS ═══════ -->
+<section class="section">
+  <div class="two-cols">
+    <!-- ANNONCES -->
+    <div class="col-panel">
+      <div class="section-header">
+        <h2>📣 Annonces récentes</h2>
+        <a routerLink="/actualites" class="see-all">Voir tout →</a>
+      </div>
+      <div class="list-wrap">
+        <div *ngFor="let a of announcements()" class="list-item announcement">
+          <div class="list-marker"
+               [class.urgent]="a.type === 'URGENT'"
+               [class.examen]="a.type === 'EXAMEN'"
+               [class.vacance]="a.type === 'VACANCE'">
+            {{ a.type === 'URGENT' ? '🚨' : a.type === 'EXAMEN' ? '📝' : a.type === 'VACANCE' ? '🏖️' : 'ℹ️' }}
+          </div>
+          <div class="list-body">
+            <div class="list-title">
+              {{ a.title }}
+              <span class="badge badge-primary" *ngIf="a.is_pinned">📌 Épinglée</span>
+            </div>
+            <div class="list-meta">
+              <span>{{ a.author }}</span> · <span>{{ formatDate(a.published_at) }}</span>
+            </div>
+            <p class="list-excerpt">{{ a.content.slice(0, 140) }}{{ a.content.length > 140 ? '…' : '' }}</p>
+          </div>
+        </div>
+        <div *ngIf="announcements().length === 0 && !loading()" class="empty-state">
+          <div class="empty-state-icon">📭</div>
+          <div class="empty-state-title">Aucune annonce disponible</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ÉVÉNEMENTS -->
+    <div class="col-panel">
+      <div class="section-header">
+        <h2>🎉 Événements à venir</h2>
+        <a routerLink="/actualites" class="see-all">Voir tout →</a>
+      </div>
+      <div class="list-wrap">
+        <div *ngFor="let e of events()" class="event-card">
+          <div class="event-date">
+            <span class="event-month">{{ formatDateTime(e.start_date) }}</span>
+          </div>
+          <div class="event-body">
+            <div class="event-title">{{ e.title }}</div>
+            <div class="event-meta">
+              <span>📍 {{ e.location || 'À venir' }}</span>
+            </div>
+            <p class="event-excerpt">{{ e.description?.slice(0, 100) }}{{ e.description?.length > 100 ? '…' : '' }}</p>
+          </div>
+        </div>
+        <div *ngIf="events().length === 0 && !loading()" class="empty-state">
+          <div class="empty-state-icon">📅</div>
+          <div class="empty-state-title">Aucun événement à venir</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

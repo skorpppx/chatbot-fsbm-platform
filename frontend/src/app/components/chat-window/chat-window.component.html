@@ -1,0 +1,34 @@
+<div class="chat-container">
+  <div class="chat-header">
+    <img src="assets/logos/dept-math-info.png" alt="Math-Info" class="chat-header-logo" />
+    <div class="chat-header-info">
+      <h2>Assistant Intelligent FSBM</h2>
+      <div class="status">
+        <span class="status-dot"></span>
+        En ligne — {{ useLLM() ? 'LLaMA 3 + RAG' : 'NLP TF-IDF v2' }}
+        <span *ngIf="lastProvider() as p" class="provider-pill"
+              [style.background]="providerBadge().color + '22'"
+              [style.color]="providerBadge().color">
+          {{ providerBadge().label }} {{ lastLatency() ? '· ' + lastLatency() + 'ms' : '' }}
+        </span>
+      </div>
+    </div>
+    <button class="llm-toggle"
+            [class.active]="useLLM()"
+            [disabled]="!llmStatus()?.groq?.available && !llmStatus()?.hf?.available"
+            (click)="toggleLLM()"
+            [title]="useLLM() ? 'Désactiver le mode IA' : 'Activer LLaMA 3 (RAG)'">
+      <span class="toggle-icon">{{ useLLM() ? '🤖' : '⚡' }}</span>
+      <span class="toggle-label">{{ useLLM() ? 'IA' : 'NLP' }}</span>
+    </button>
+  </div>
+
+  <div class="messages-container">
+    <app-message-bubble *ngFor="let msg of messages" [message]="msg"></app-message-bubble>
+    <app-quick-actions *ngIf="showQuickActions && messages.length === 1" (quickAction)="sendMessage($event)"></app-quick-actions>
+    <app-typing-indicator *ngIf="isTyping"></app-typing-indicator>
+    <div #messagesEnd></div>
+  </div>
+
+  <app-input-bar [disabled]="isTyping" (sendMessage)="sendMessage($event)"></app-input-bar>
+</div>

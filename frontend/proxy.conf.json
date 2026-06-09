@@ -1,0 +1,10 @@
+{
+  "/api/chat/feedback": { "target": "http://localhost:8001", "secure": false, "changeOrigin": true },
+  "/api/chat":          { "target": "http://localhost:8001", "secure": false, "changeOrigin": true },
+  "/api/llm":           { "target": "http://localhost:8001", "secure": false, "changeOrigin": true },
+  "/api/intents":       { "target": "http://localhost:8001", "secure": false, "changeOrigin": true },
+  "/api/feedback":      { "target": "http://localhost:8001", "secure": false, "changeOrigin": true, "pathRewrite": { "^/api/feedback": "/api/chat/feedback" } },
+  "/api/academic":      { "target": "http://localhost:8002", "secure": false, "changeOrigin": true, "pathRewrite": { "^/api/academic": "/api" } },
+  "/api/health":        { "target": "http://localhost:8001", "secure": false, "changeOrigin": true },
+  "/api/stats":         { "target": "http://localhost:8001", "secure": false, "changeOrigin": true }
+}

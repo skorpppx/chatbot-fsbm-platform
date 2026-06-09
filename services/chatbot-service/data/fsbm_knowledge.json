@@ -1,0 +1,65 @@
+{
+  "_meta": {
+    "description": "Couche de connaissance institutionnelle REELLE de la FSBM, alimentee a partir du site officiel fsbm.ma (juin 2026) et de sources academiques verifiables (Google Scholar). Utilisee par le chatbot (RAG) pour fonder ses reponses sur des donnees authentiques.",
+    "sources": [
+      "fsbm.ma (Departements, Formation, Corps Professoral, Mot du Doyen)",
+      "Google Scholar (profils des enseignants-chercheurs)"
+    ],
+    "last_updated": "2026-06-07"
+  },
+  "faculte": {
+    "nom": "Faculte des Sciences Ben M'Sick (FSBM)",
+    "universite": "Universite Hassan II de Casablanca",
+    "doyen": "Pr. Abdeslam EL BOUARI",
+    "contact_email": "fsbm.contact@univh2c.ma",
+    "contact_tel": "+212 6 61 44 24 27",
+    "adresse": "Boulevard Driss El Harti, Ben M'Sik, Casablanca, Maroc",
+    "site": "fsbm.ma",
+    "nb_departements": 6,
+    "nb_professeurs": 239,
+    "nb_etudiants": 11994,
+    "nb_filieres": 30,
+    "nb_laboratoires": 12,
+    "nb_entreprises_partenaires": 160
+  },
+  "departements": [
+    {"nom": "Biologie", "chef": "Pr. FARH Mohamed"},
+    {"nom": "Chimie", "chef": "Pr. EL KOUALI Mhammed"},
+    {"nom": "Geologie", "chef": "Pr. MOUFLIH Mustapha"},
+    {"nom": "Mathematiques et Informatique", "chef": "Pr. ADNAOUI Khalid"},
+    {"nom": "Physiques", "chef": "Pr. MAIZROUI M'hammed"},
+    {"nom": "Sciences de la Communication et Humanites", "chef": "Pr. Nadia CHAFIQ"}
+  ],
+  "filieres": [
+    {"departement": "Mathematiques et Informatique", "nom": "Developpement Informatique", "cycle": "LICENCE", "responsable": "Pr. SAEL Nihal"},
+    {"departement": "Mathematiques et Informatique", "nom": "Developpement Full Stack", "cycle": "LICENCE", "responsable": "Pr. Mohssine Bensebii"},
+    {"departement": "Mathematiques et Informatique", "nom": "Cybersecurite et Administration des Systemes et Reseaux", "cycle": "LICENCE", "responsable": "Pr. OUAHABI Sara"},
+    {"departement": "Mathematiques et Informatique", "nom": "Administration Reseaux et Systemes", "cycle": "LICENCE", "responsable": "Pr. ACHTAICH Khadija"},
+    {"departement": "Mathematiques et Informatique", "nom": "Statistiques", "cycle": "LICENCE", "responsable": "Pr. FERJOUCHA Hanane"},
+    {"departement": "Mathematiques et Informatique", "nom": "Analyse Mathematique", "cycle": "LICENCE", "responsable": "Pr. BOUDKHIA Khadija"},
+    {"departement": "Physiques", "nom": "Physique Appliquee", "cycle": "LICENCE", "responsable": "Pr. SAID TADLFIK"},
+    {"departement": "Physiques", "nom": "Electronique, Systemes embarques et Telecommunication", "cycle": "LICENCE", "responsable": "Pr. KASSMI Aziza"},
+    {"departement": "Physiques", "nom": "Traitement de l'Information", "cycle": "MASTER", "responsable": "Pr. ATOUF Issam"},
+    {"departement": "Chimie", "nom": "Genie des Materiaux", "cycle": "LICENCE", "responsable": "Pr. MEHDAOUI Boubker"},
+    {"departement": "Biologie", "nom": "Sciences Biomedicales Appliquees", "cycle": "LICENCE", "responsable": "Pr. FARH Mohamed"},
+    {"departement": "Biologie", "nom": "Sciences de la Sante", "cycle": "MASTER", "responsable": "Pr. Hassan TAKI"},
+    {"departement": "Geologie", "nom": "Geosciences et Georessources", "cycle": "LICENCE", "responsable": "Pr. OUKASSOU Mustapha"}
+  ],
+  "professeurs_recherche": [
+    {"nom": "Pr. El Habib Benlahmer", "departement": "Mathematiques et Informatique", "grade": "PES", "interets": "TALN (traitement automatique du langage), web semantique, apprentissage automatique", "citations": 2785, "h_index": 24, "i10_index": 61, "role": "Encadrant de ce projet de fin d'etudes"},
+    {"nom": "Pr. Mohamed Talea", "departement": "Mathematiques et Informatique", "grade": "PES", "interets": "Theorie des graphes, systemes intelligents, reseaux", "citations": 6755, "h_index": 39, "i10_index": 121, "role": "Professeur de l'enseignement superieur"},
+    {"nom": "Pr. Sanaa El Filali", "departement": "Mathematiques et Informatique", "grade": "PES", "interets": "Internet des objets (IoT), intelligence artificielle, apprentissage automatique, TALN", "citations": 1164, "h_index": 13, "i10_index": 14, "role": "Professeure d'informatique"},
+    {"nom": "Pr. Omar Zahour", "departement": "Mathematiques et Informatique", "grade": "PH", "interets": "Chatbots, orientation educative, TALN, modeles BERT", "citations": 182, "h_index": 5, "i10_index": 4, "role": "Chercheur (chatbots educatifs)"},
+    {"nom": "Pr. Kamal El Guemmat", "departement": "Mathematiques et Informatique", "grade": "PH", "interets": "Science des donnees, e-learning, big data, machine learning", "citations": 395, "h_index": 13, "i10_index": 15, "role": "Chercheur"}
+  ],
+  "faits_cles": [
+    "La FSBM est dirigee par le Doyen Pr. Abdeslam EL BOUARI.",
+    "La faculte compte 6 departements pedagogiques et 239 enseignants-chercheurs, pour environ 11 994 etudiants.",
+    "La FSBM propose une trentaine de filieres (licences et masters), s'appuie sur 12 laboratoires de recherche et 160 entreprises partenaires.",
+    "La filiere Developpement Informatique est une Licence du departement de Mathematiques et Informatique, sous la responsabilite du Pr. SAEL Nihal.",
+    "Le departement de Mathematiques et Informatique est dirige par le Pr. ADNAOUI Khalid. C'est le departement charge de l'informatique a la FSBM : il n'existe pas de departement nomme uniquement 'Informatique', donc toute question sur le 'departement informatique' renvoie a ce departement (chef : Pr. ADNAOUI Khalid).",
+    "L'encadrant de ce projet, le Pr. El Habib Benlahmer (PES), travaille sur le TALN, le web semantique et l'apprentissage automatique (2785 citations, h-index 24 sur Google Scholar).",
+    "Le contact officiel de la faculte est fsbm.contact@univh2c.ma, telephone +212 6 61 44 24 27.",
+    "La faculte est situee Boulevard Driss El Harti, Ben M'Sik, Casablanca."
+  ]
+}

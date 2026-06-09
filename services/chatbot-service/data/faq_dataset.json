@@ -1,0 +1,822 @@
+{
+  "version": "3.2.0",
+  "languages": ["fr", "en", "darija"],
+  "default_language": "fr",
+  "last_updated": "2026-05-27",
+  "notes": "v3.2 : Personnalisation genre + intents conversationnels (small talk, empathie, stress, motivation).",
+  "intents": [
+    {
+      "tag": "identite_genre",
+      "category": "general",
+      "icon": "👤",
+      "patterns": {
+        "fr": [
+          "Je suis une fille","Je suis un garçon","Je suis une étudiante","Je suis un étudiant",
+          "Je suis Madame","Je suis Mademoiselle","Je suis Monsieur","Je suis une jeune fille",
+          "Je suis un jeune homme","Je suis une femme","Je suis un homme",
+          "Je m'appelle","Mon nom est","Mon prénom est","Appelez-moi",
+          "Je suis Karim","Je suis Fatima","Je suis Yassine","Je suis Salma",
+          "Tutoie-moi","Vouvoie-moi","Tu peux m'appeler","Tu peux me dire"
+        ],
+        "en": [
+          "I am a girl","I'm a girl","I am a boy","I'm a boy","I am female","I am male",
+          "I am a woman","I am a man","I am a student","I'm a student",
+          "My name is","I am","I'm","Call me","You can call me",
+          "I'm Karim","I'm Fatima","I'm Salma","I'm Yassine"
+        ],
+        "darija": [
+          "Ana bnt","Ana wld","Ana fata","Ana fatat","Ana mra","Ana rajl","Ana rajel",
+          "Ana zamil","Ana zamila","Ana lalla","Ana wahda","Ana wahed","Ana wldi","Ana bnti",
+          "Smiti","Smiyti","Smiy ti","Smiti Fatima","Smiti Karim","Smiti Salma","Smiti Yassine",
+          "3rrefni","3rrefkom","Bnt ana","Wld ana","Ana stagiaire bnt","Ana student wld",
+          "Tsajjelt ana bnt","Tsajjelt ana wld","Ana mra mrakch","Ana fataat",
+          "Goul li khti","Goul li khoya","Goul liya lalla","Ndir lik bnt","Ndir lik wld",
+          "Sm3 ana smiti","Khalini ngoul lik smiti"
+        ]
+      },
+      "responses": {
+        "fr": [
+          "Enchanté{name_space} ! 😊 Je vais retenir ça pour adapter ma façon de te parler.",
+          "Ravi de te connaître{name_space} ! Que veux-tu savoir sur la FSBM ?",
+          "Bienvenue{name_space} à la FSBM ! Posez-moi vos questions, je suis là pour vous aider."
+        ],
+        "en": [
+          "Nice to meet you{name_space}! 😊 I'll remember to address you properly.",
+          "Welcome{name_space}! What would you like to know about FSBM?"
+        ],
+        "darija": [
+          "Ahlan wa sahlan {voc}{name_space} ! 😊 Mrahba bik f FSBM. Daba 3raftk, ana ghadi nkellmek b la3ada lhasna. Sawalni 3la ay haja !",
+          "Marhba bik {voc}{name_space} ! Mzyan li 3rrefti rasek. Ach bghiti t3raf 3la FSBM ? Ana hna bach n3awnek f kolchi."
+        ]
+      }
+    },
+    {
+      "tag": "comment_vas_tu",
+      "category": "general",
+      "icon": "🤗",
+      "patterns": {
+        "fr": [
+          "Comment vas-tu","Comment ça va","Ça va","Tu vas bien","Comment tu te sens",
+          "Ça gaze","Comment vas-tu aujourd'hui","Tout va bien","Et toi ça va"
+        ],
+        "en": [
+          "How are you","How are you doing","How do you feel","How's it going",
+          "How have you been","You okay","Are you okay","How you doing"
+        ],
+        "darija": [
+          "Kif dayer","Kif dayra","Kif hala","Labas 3lik","Wach mzyan",
+          "Wach kolchi mzyan","Kif sa7a","Achno khbarek","Wach kolchi bikhir",
+          "Ki dayer","Ki dayra","Kif lhal","Wach bikhir","Achno akhbarek",
+          "Wach m3a slama","Kifash sa7tek","Kif dayer lyom","Wach koollchi mzyan"
+        ]
+      },
+      "responses": {
+        "fr": [
+          "Très bien, merci{name_comma} ! 😊 Je suis toujours prêt à t'aider. Et toi, comment ça va ? Que veux-tu savoir ?",
+          "Ça va parfaitement bien{name_comma}, je suis là 24h/24 pour répondre à toutes tes questions. Et toi, comment tu te portes ?"
+        ],
+        "en": [
+          "I'm doing great{name_comma}! 😊 Ready to help you 24/7. How about you? What can I do for you?",
+          "I'm always here and happy to help{name_comma}! How are you doing today?"
+        ],
+        "darija": [
+          "L7amdulilah {voc}{name_comma} ! 😊 Ana mzyan, jaheh n3awnek f ay haja. O nta{nta_nti}/nti, kif {dayer_dayra} ? Wach kayna chi haja li bghiti tssawel ?",
+          "Bikhir {voc} ! Hamdolah, ana toujours mzyan kanchti n3awn student dyal FSBM. O nti/nta {ach_dayer_dayra} ? Goul li ach khassek !",
+          "Tjouwed {voc} ! Ana l7amdulilah, hna 3andek 24/24. Wach kolchi mzyan m3ak {name} ? Ila kant 3andek chi mochkila wla bghiti chi ma3louma, ana hna."
+        ]
+      }
+    },
+    {
+      "tag": "stress_examens",
+      "category": "general",
+      "icon": "😰",
+      "patterns": {
+        "fr": [
+          "Je stresse pour mes examens","J'ai peur des examens","Je suis stressé","Je suis stressée",
+          "Les examens m'angoissent","J'ai trop de pression","Je panique pour les examens",
+          "Je ne sais pas comment réviser","J'ai pas le temps de réviser","Examens c'est dur"
+        ],
+        "en": [
+          "I'm stressed about exams","Exams scare me","I'm worried about exams","I'm panicking",
+          "Exam pressure is too much","I don't know how to study","Exams are too hard"
+        ],
+        "darija": [
+          "Kanstress mn lexams","Khayef mn lexams","Khayfa mn lexams","Ana khayef bzaf",
+          "Lexams sa3bin","Ma3rftch kifash n9ra","Ma3andich lwa9t l révision",
+          "Lexams 9raab o ma3andich confidence","Kanahsar f la pression","Lpression sa3iba 3liya",
+          "Khayef ma na7jat","Khayfa ma najahtch","Wach n9der nnaja7","Achno ndir bach na7jat",
+          "Ma3andich motivation l n9ra","Lexams kankhaf manhom","Kanqolq f lexams"
+        ]
+      },
+      "responses": {
+        "fr": [
+          "Je te comprends{name_comma}, le stress des examens est très commun. Voici des conseils efficaces :\n\n**🧠 Méthode :**\n• Pomodoro : 25 min de révision + 5 min pause\n• Annales des années précédentes (groupes Facebook FSBM)\n• Révise en groupe avec 1-2 amis sérieux\n• Fais des fiches récapitulatives par module\n\n**💪 Bien-être :**\n• Dors 7-8h/nuit (drouri !)\n• 30 min de sport quotidien (réduit le stress)\n• Mange équilibré, évite trop de café\n• Respire profondément avant l'examen\n\n**🎯 Avant l'examen :**\n• Relis tes fiches le matin\n• Arrive 15 min en avance\n• Lis tout le sujet avant de commencer\n• Gère ton temps (40% temps / question grosse coef)\n\nN'oublie pas : tu as bossé toute l'année, tu en es capable {voc} ! 💙"
+        ],
+        "en": [
+          "I understand{name_comma}, exam stress is very common. Here's effective advice:\n\n**🧠 Method:**\n• Pomodoro: 25 min review + 5 min break\n• Past exam papers (Facebook FSBM groups)\n• Group study with 1-2 serious friends\n• Make summary sheets per module\n\n**💪 Self-care:**\n• Sleep 7-8h/night (essential!)\n• 30 min daily exercise (reduces stress)\n• Eat well, limit caffeine\n• Deep breathing before the exam\n\nRemember{name_comma}: you've worked all year, you can do this 💙"
+        ],
+        "darija": [
+          "Ma t-stressich {voc}{name_comma}, hadshi naturel kollna kantcheek f stress 9bl lexams. Ana ndawez lik conseils mzyan :\n\n**🧠 Méthode dyal révision :**\n• **Technique Pomodoro** : 25 min révision + 5 min raha (mzyan bzaf)\n• **Annales** dyal 3wam li flat — kayna f groupes Facebook FSBM o f bibliothèque\n• **Drassa b group** m3a 1-2 sahbat séraitin (mais machi ktar !)\n• **Fiches récapitulatives** dyal kol module — l'résumé khassek\n\n**💪 La santé :**\n• **N3as** : 7-8 sa3a fi nuit — DROURI ! Ma ttsahrich\n• **Sport** 30 min kol nhar (mchi, jeri, vélo) — kayna9es lstress\n• **Akl ml7ih** : t8wel khder o frwita, ma t-katherch lkaaba\n• **Tnafass** b 9wa 9bl ma dakhel lexamen\n\n**🎯 Nhar lexamen :**\n• **9ra fiches dyalek** soubh\n• Wsel **15 min 9bl** — t-9der tatkawn 9bel\n• **9ra l'sujet kamel 9bl ma bdayti** — pas de précipitation\n• **Gérer lwaqt** : 40% l grand coef, 30% medium, 30% petit\n\n**💭 L'kha9 hammin :**\nMa nsawch li khdmti **3am kamel** ! Nta/{nta_nti} {naj7_naj7a}, 3andek li khassek bach tnjeh. Confiance f rassek {voc} ! 💙\n\nIla kant 3andek mochkila spécifique f chi module, sawalni o ndir lik conseils ciblés."
+        ]
+      }
+    },
+    {
+      "tag": "motivation_etudes",
+      "category": "general",
+      "icon": "💪",
+      "patterns": {
+        "fr": [
+          "Je n'ai pas de motivation","J'ai pas envie d'étudier","Je suis fatigué de la fac",
+          "J'en ai marre","Je veux abandonner","Pourquoi je continue","Ça me dégoûte",
+          "J'ai pas le moral","Donne-moi de la motivation","Encourage-moi"
+        ],
+        "en": [
+          "I have no motivation","I don't feel like studying","I'm tired of school",
+          "I want to give up","Why bother","I'm not in the mood","Motivate me",
+          "Encourage me","I'm losing hope"
+        ],
+        "darija": [
+          "Ma3andich motivation","Mab9itch ndir","Z7a9t mn drassa","Ma bghit n9ra",
+          "Bghit nkhellil l9rayya","3andi ras 9assi3","Ma3andich envie",
+          "Shedni shwiya","Motivini","Goul li chi haja t-encourage",
+          "Drassa 3aldat","Z3em 9rayti m3a wa3rah","Tani7t","Wsalt l limite",
+          "Kanhass rassi za3em","Kanhass b3id 3la lhdaf","Walou katqolat li"
+        ]
+      },
+      "responses": {
+        "fr": [
+          "Hé{name_comma}, je te comprends. Ces moments arrivent à tout le monde 💙\n\n**🌟 Rappelle-toi pourquoi tu as commencé :**\nTu n'as pas réussi le bac et choisi cette filière par hasard. Tu avais une raison — peut-être un métier qui te fait rêver, une famille à rendre fier, ou simplement le désir d'apprendre.\n\n**📊 Ce que tu as déjà accompli :**\n• Tu as réussi le bac (pas tout le monde y arrive)\n• Tu as choisi une voie scientifique (admirable)\n• Tu es à la FSBM — une faculté reconnue\n• Tu as déjà validé X modules\n\n**🎯 Astuces concrètes :**\n• Découpe en petites tâches (1h de révision, pas 5)\n• Récompense-toi (1h de révision → 30 min de série)\n• Change d'endroit (bibliothèque → café → maison)\n• Rejoins un groupe d'étude motivé\n• Parle à un prof bienveillant\n\n**💭 Le truc qui marche :**\n« Je n'étudie pas pour 3 ans, j'étudie pour les 50 prochaines années. »\n\nTu peux y arriver {voc}. Beaucoup d'étudiants ont eu le même moment de faiblesse et ont fini par réussir. 💪"
+        ],
+        "en": [
+          "Hey{name_comma}, I get it. Everyone goes through these moments 💙\n\n**🌟 Remember why you started:**\nYou earned your baccalaureate and chose this path for a reason — maybe a dream job, a family to make proud, or simple love of learning.\n\n**🎯 Concrete tips:**\n• Break tasks down (1h study, not 5h)\n• Reward yourself (1h study → 30 min show)\n• Change environment (library → café → home)\n• Join a motivated study group\n• Talk to a kind professor\n\nYou can do this{name_comma}. Many students hit this wall and bounced back stronger. 💪"
+        ],
+        "darija": [
+          "Salam {voc}{name_comma}, ana fhmtk. Hadshi kayadrouz kollna 💙\n\n**🌟 3aaqlik 3lach bdayti :**\nKtbti bac, khtariti hadi filiya b sabab. Y9der ykoun :\n• Khdma li dratiha rêve\n• L3a'ila li bghiti tfariha\n• Hobb dyal 3lim o iktichaf\n• Mostakbal mzyan\n\n**📊 Achno l9oudriti :**\nNta/{nta_nti} naja7ti f bac (machi koolchi tdir hadak)\nKhtariti tari9 3ilmi (admirable bzaf)\nDakhalti FSBM — faculté m3rouf\n3andek bzaf modules validés déjà\nWslti hna — la moitié de l route déjà!\n\n**🎯 Astuces dialna :**\n• **Découpiha** : 1 sa3a révision, ma 5 sa3a\n• **Récompense rassek** : 1h révision → 30 min série\n• **Bddel l'place** : bibliothèque → café → la maison\n• **Group d'étude** mzyan : motivation collective\n• **Sawel chi prof** li 3andek confiance fih\n\n**💭 La 7arika dyal najah :**\n« Ma kan9ra l 3 snin gher, ana kan9ra l 50 sana jaya. »\n\nNta/{nta_nti} {naj7_naj7a} {voc}, ana s9ar 3lik. Bzaf students ndawzou had l'moment dyal d3ef o b9aw {naj7_naj7a} f akhir. 💪\n\n🎵 **Conseil khouss :** Sma3 chi musique mzyana, mchi tjeri 30 min, o b3d 3awd ldrassa. T-tjadded mzyan."
+        ]
+      }
+    },
+    {
+      "tag": "compliment_bot",
+      "category": "general",
+      "icon": "😊",
+      "patterns": {
+        "fr": [
+          "Tu es génial","T'es trop bien","Bot intelligent","Tu m'as beaucoup aidé",
+          "Merci beaucoup tu m'as sauvé","T'es top","T'es cool","Bon travail",
+          "Tu réponds bien","Tu es utile"
+        ],
+        "en": [
+          "You're great","You're awesome","Smart bot","You helped me a lot",
+          "Thanks you saved me","You're cool","Good job","You're useful"
+        ],
+        "darija": [
+          "Nta zwin","Nti zwina","Mzyan bzaf","Saved my life","Khdmtek mzyana",
+          "Llah ikhellik 3awantni bzaf","Nta dakhi","Nti dakhya","Khdma mzyana",
+          "Mer7ben fik","Tbark allah 3lik","Brafo 3lik","Sm3ti li bghit"
+        ]
+      },
+      "responses": {
+        "fr": [
+          "Merci beaucoup{name_comma} ! 😊 Ça me fait vraiment plaisir de t'avoir aidé. C'est exactement pour ça que je suis là. Si tu as d'autres questions, je suis toujours dispo !",
+          "C'est gentil{name_comma} 🥰 Je fais juste mon travail. L'important c'est que tu trouves les bonnes infos pour réussir à la FSBM !"
+        ],
+        "en": [
+          "Thank you so much{name_comma}! 😊 Glad I could help — that's exactly what I'm here for.",
+          "You're too kind{name_comma}! 🥰 I'm just doing my job. The important thing is that you succeed at FSBM!"
+        ],
+        "darija": [
+          "Tbarkallah 3lik {voc}{name_comma} ! 😊 Ana farhan li n3awantek mzyan, hadshi howa li khssni ndir. Ila kant 3andek chi soual akhor, ana toujours hna !",
+          "Llah ikhellik {voc} ! 🥰 Ana khdmti hadi gher, mais farhan bzaf li 7sniti khdmti. Lmohimm howa li nti/nta {naj7_naj7a} f FSBM !",
+          "Sa7it {voc}{name_comma} ! Hadi raddet fi3l ttayyiba li katfarrahni. Khallini mawjoud kolma 7tajitini. 💙"
+        ]
+      }
+    },
+    {
+      "tag": "demande_aide_psychologique",
+      "category": "services",
+      "icon": "💚",
+      "patterns": {
+        "fr": [
+          "J'ai besoin d'aide","Je suis déprimé","Je suis déprimée","J'ai pas le moral",
+          "Je veux parler à quelqu'un","J'ai des pensées noires","Je vais mal","Je suis triste",
+          "Aide psychologique","Soutien étudiant"
+        ],
+        "en": [
+          "I need help","I'm depressed","I'm not okay","I want to talk to someone",
+          "I have dark thoughts","I feel sad","I need psychological help","Student support"
+        ],
+        "darija": [
+          "Bghit chi 7ad nsawl m3ah","Ana hzin","Ana hzina","Kanhass rassi z3em",
+          "Walou katqolat li","3andi mochkila psychologique","Khassni 3awn",
+          "Ana m3a3oun","Ana m3a3ouna","Ma3andich noor","Ana mhabbet","Bzaf dyal lhmoum"
+        ]
+      },
+      "responses": {
+        "fr": [
+          "Je suis désolé que tu te sentes ainsi{name_comma} 💙. Ce que tu ressens compte et c'est très bien de chercher de l'aide.\n\n**Voici des ressources gratuites et confidentielles :**\n\n📞 **SOS Amitié Maroc** : 0801 000 180 (gratuit, anonyme, 24h/24)\n📞 **Cellule d'écoute psychologique étudiante** (ministère) : 0801 000 181\n📞 **Centre de psychologie de l'université Hassan II** : prendre RDV via service des affaires étudiantes\n\n**À la FSBM :**\n• Le service de santé universitaire peut t'orienter\n• Certains professeurs sont formés à l'écoute (notamment en biologie)\n• L'infirmerie peut faire un premier accueil\n\n**Quelques choses qui peuvent aider tout de suite :**\n• Parler à quelqu'un de confiance (famille, ami proche)\n• Sortir marcher 30 min au soleil\n• Limiter les réseaux sociaux quelques jours\n• Dormir suffisamment (priorité absolue)\n\nTu n'es pas seul{m_f}. Beaucoup de personnes traversent ça et s'en sortent. Si la souffrance est intense, n'attends pas — appelle le 0801 000 180 maintenant. 💙"
+        ],
+        "en": [
+          "I'm sorry you're feeling this way{name_comma} 💙. What you're going through matters.\n\n**Free confidential resources:**\n\n📞 **SOS Amitié Morocco**: 0801 000 180 (free, anonymous, 24/7)\n📞 **Student psychological hotline**: 0801 000 181\n📞 **Hassan II University psychology center**: RDV via student affairs\n\n**At FSBM:**\n• University health service can refer you\n• Some professors are trained listeners\n• Infirmary for first contact\n\nYou're not alone. Many people go through this and come out stronger. If pain is intense, don't wait — call 0801 000 180 now. 💙"
+        ],
+        "darija": [
+          "Ana 7zin li nta/{nta_nti} {hzin_hzina} {voc}{name_comma} 💙. Hadshi li katchti howwa mohim, o mzyan li katchti tjib 3awn — hadshi 3lamat chajaa3.\n\n**Hadshi 3awn li n9der ngoul lik 3lih (gratuit o anonyme) :**\n\n📞 **SOS Amitié Maroc** : **0801 000 180** (gratuit, anonyme, 24h/24)\n📞 **Cellule d'écoute psychologique** dyal Ministère : 0801 000 181\n📞 **Centre psychologie dyal jami3a Hassan II** : RDV f service dyal student affairs\n\n**F FSBM :**\n• Service dyal sa7a dyal jami3a kayredirec3ek\n• Chi profs mhada3in f l'écoute (ghaliban biologie / sciences humaines)\n• Infirmerie kaywsel l'orientation\n\n**Achno t9der tdir mn daba :**\n• **Tssawel m3a chi 7ad** dyal thi9a (3a'ila, sahb)\n• **Khrouj tjeri** 30 min f chams\n• **9ass mn social media** chi 3-4 ayam\n• **N3as** kafi (drouri jiddan)\n• **Akl mzyan**, ma t-sakech\n• **Wahcheck f Allah** : la prière kay-sahel\n\nMakatch wahid {voc}. Bzaf nas dawzou hadshi o b9aw a9wa. Ila kant l-mosiba 9wiya bzaf — **ma t-stsanach** : 3aiyit l 0801 000 180 daba. Hada chi 7ad kayfhmek o kayssm3ek bla 7okm.\n\n💙 Khlik 9wi/{naj7_naj7a}, ana hna ila bghiti tssawel."
+        ]
+      }
+    },
+    {
+      "tag": "salutation",
+      "category": "general",
+      "icon": "👋",
+      "patterns": {
+        "fr": ["Bonjour","Salut","Bonsoir","Coucou","Bonjour le chatbot","Salut FSBM","Yo","Hey","Bjr"],
+        "en": ["Hello","Hi","Hey","Good morning","Good evening","Greetings","Hi there","Hello bot","Hello FSBM","What's up"],
+        "darija": [
+          "Salam","Salam alaikoum","Asslamou alaikoum","Ahlan","Ahlan biik","Marhba","Salam 3likoum","Salam khoya","Salam khti",
+          "Labas","Labas 3lik","Labas alikoum","Wesh","Wesh dialk","Wesh khoya","Wesh akhouya","Wach kayn","Wach hadik",
+          "Hey kifash","Sba7 lkhir","Msa lkhir","Sba7 lkhir 3lik","Yallah","Bonjour khouya","Salut sahbi","Ahla wa sahla",
+          "Marhba bik","Marhba bikoum","Allo","Allo chatbot","Salam ya chatbot","Salam ya akhi","3lach kayn","Wesh bikoum",
+          "Kifash hala","Kifash sa7a","Labas 3la khouk","Wsh sa7a"
+        ]
+      },
+      "responses": {
+        "fr": [
+          "Bonjour ! 👋 Bienvenue au chatbot de la FSBM. Comment puis-je vous aider ?",
+          "Salut ! Je suis l'assistant intelligent FSBM. Posez-moi vos questions sur les filières, examens, stages, bourses…",
+          "Bonjour ! Que voulez-vous savoir aujourd'hui ?"
+        ],
+        "en": [
+          "Hello! 👋 Welcome to the FSBM chatbot. How can I help you?",
+          "Hi there! I'm the FSBM smart assistant — ask me anything about programs, exams, scholarships…",
+          "Hello! What would you like to know today?"
+        ],
+        "darija": [
+          "Wa 3likoum salam {voc}{name_comma} ! 👋 Marhba bik f chatbot dyal FSBM. Ana hna bach n3awnek f kolchi li khassek t3ref :\n• 📋 Tassjil o l'inscription\n• 📚 L'filiyat o l'masters\n• 📅 L'emploi du temps o lexams\n• 💼 Stages o PFE\n• 💰 Lminha\n• 🌟 La vie d'étudiant\n\nSawalni li bghiti, ana hadi mn jihtek !",
+          "Ahlan {voc}{name_comma} ! 👋 Ana l'assistant dakhi dyal FSBM. Daba n9der n3awnek f bzaf dyal l7ajat : kifash ttsajjel, achno l'filiyat lmojoda, imta lexams, kifash tjib stage, lminha... Ach bghiti t3ref ?",
+          "Salam {voc}{name_comma} ! 😊 Ila bghiti chi ma3louma 3la FSBM, ana mojoud 24/24. Hadshi li n9der n3awnek fih :\n• Procédure dyal tassjil\n• Tafassil dyal kol filiya (SMI, DI, SMA, master IADS...)\n• Mawa3id dyal lexams o lkhruj dyal rasultats\n• Stages o PFE\n• Wlminha o lijbar lmaalia\n\nNta ach 3andek?",
+          "Wesh {voc}{name_comma} ! Marhba bik 3andna f chatbot dyal FSBM. Ana hna bach njawbek 3la kolchi : 9rayya, exams, stage, bourses... Goul li ach bghiti tssawel, o ana n3awnek mn 1ra mra."
+        ]
+      }
+    },
+    {
+      "tag": "aurevoir",
+      "category": "general",
+      "icon": "👋",
+      "patterns": {
+        "fr": ["Au revoir","Bye","À bientôt","Merci au revoir","Bonne journée","À plus","Ciao"],
+        "en": ["Bye","Goodbye","See you","See you later","Thanks bye","Good day","Take care","Cheers"],
+        "darija": [
+          "Bslama","Bslama 3lik","Beslama","Bslama khoya","Bslama 3likoum","Bsslama khti",
+          "Lhla i7fdek","Llah ma3ak","Llah ihafdek","Llah ihennik","Allah ma3ak","Yallah bslama",
+          "Thala f rasek","Thala flikoum","Thala fkhouk","M3a Slama","Saafi bslama","Ila l li9ae",
+          "Nshofok mn b3d","Nchofkom","M3a slama","Yallah","Khlatouni"
+        ]
+      },
+      "responses": {
+        "fr": [
+          "Au revoir ! 👋 Reviens quand tu veux, je suis là 24h/24.",
+          "À bientôt ! Bonne continuation à la FSBM."
+        ],
+        "en": [
+          "Goodbye! 👋 Come back anytime, I'm here 24/7.",
+          "See you! Best of luck at FSBM."
+        ],
+        "darija": [
+          "Bslama {voc}{name_comma} ! 👋 Rja3 ay waqt li bghiti, ana hna 24/24. Llah i7fdek f drassa dyalek !",
+          "M3a slama {voc} ! Thala f rassek o thala f l'9rayya dyalek. Ila kant 3andek mochkila, ana hna.",
+          "Beslama {voc}{name_comma} ! Llah ihennik o ymddek nja7 f FSBM. Bach yebda dakhi nti / nta f 9rayya !",
+          "Yallah bslama {voc}{name_comma} ! Sa7a o ra7a, o mat-nsach : ana mawjoud kolma bghiti tssawel."
+        ]
+      }
+    },
+    {
+      "tag": "remerciement",
+      "category": "general",
+      "icon": "🙏",
+      "patterns": {
+        "fr": ["Merci","Merci beaucoup","Je te remercie","C'est gentil","Super merci","Merci pour l'info"],
+        "en": ["Thanks","Thank you","Thank you so much","Appreciate it","Thanks a lot","Many thanks"],
+        "darija": [
+          "Shokran","Shokran bzaf","Shokran khoya","Shokran khti","Shokran jazilan","Shokran 3lik",
+          "Llah ikhalik","Llah ijazik bi khir","Llah i3tik sa7a","Llah i3awnek","Llah ikhellik",
+          "Barakallah fik","Barakallahu fik","Saha","Sa7it","Tbarkallah 3lik","Tbarkallah",
+          "Saafi shokran","Mzyan bzaf shokran","Naime3","Naime3 3lik","Mer7ben jazilan"
+        ]
+      },
+      "responses": {
+        "fr": [
+          "De rien ! Je suis là pour ça. 😊",
+          "Avec plaisir ! N'hésite pas à revenir.",
+          "Je vous en prie ! Bonne continuation."
+        ],
+        "en": [
+          "You're welcome! 😊",
+          "My pleasure! Come back anytime.",
+          "Anytime! Glad I could help."
+        ],
+        "darija": [
+          "La shokra 3ala wajib {voc} ! 😊 Hadi khdmti, ana hna bach n3awnek. Ila walat 3andek chi soual akhor, jib lih !",
+          "Bla jmil {voc}{name_comma} ! Ana farhan ana 3awantek. Llah ya3tik sa7a o nja7 f FSBM !",
+          "Saha 3lik {voc}{name_comma} ! 🙏 N'hésite mat-tssawelnich ila kanat 3andek chi mochkila okhra.",
+          "Tbarkallah 3lik {voc}{name_comma} ! Ana mawjoud kolma 7tajitini. Yallah, kt3raf li ana hna 24/24 !"
+        ]
+      }
+    },
+    {
+      "tag": "identite_chatbot",
+      "category": "general",
+      "icon": "🤖",
+      "patterns": {
+        "fr": ["Qui es-tu","T'es qui","C'est quoi ce chatbot","Que peux-tu faire","À quoi tu sers","Présente-toi"],
+        "en": ["Who are you","What are you","What can you do","Introduce yourself","What is this chatbot","What's your purpose"],
+        "darija": [
+          "Chkoun nta","Achkoun nti","Chkoun nta yallah","Achkoun antuma","Chno nta","Chno hadi","Chno khdmtek",
+          "Wesh ka tdir","Wach katdir","Achno katdir","Ach kat9der dir",
+          "3rrefni 3la rassek","Goul liya chkoun nta","Chno smitek","Sm3ni chkoun nta",
+          "Hada chno","Hada chkoun","Ach hadi","Wesh hada chatbot wla bnadem",
+          "Kifash khdmtek","Achno katsta7e9 dir","B ach katkhdem"
+        ]
+      },
+      "responses": {
+        "fr": [
+          "Je suis le Chatbot Intelligent de la FSBM ! 🤖\n\nJe peux vous aider avec :\n• 📋 Inscription / Réinscription\n• 📚 Filières & Masters\n• 📅 Emplois du temps & Examens\n• 💼 Stages & PFE\n• 💰 Bourses\n• 🌟 Vie étudiante\n\nPosez-moi votre question !"
+        ],
+        "en": [
+          "I'm the FSBM Smart Chatbot! 🤖\n\nI can help you with:\n• 📋 Registration / Re-enrollment\n• 📚 Programs & Masters\n• 📅 Schedules & Exams\n• 💼 Internships & Final-year projects\n• 💰 Scholarships\n• 🌟 Student life\n\nAsk me anything!"
+        ],
+        "darija": [
+          "Ana l'Chatbot Dakhi dyal FSBM ! 🤖\n\nAna mahdor f Casablanca, b3id 3liya FSBM kfaculté. Hadshi li n9der n3awnek fih :\n\n📋 **Tassjil o réinscription** : kifash ttsajjel, achno l'documents lkhasshom, imta lpériodes\n📚 **L'filiyat** : tafassil dyal kol licence (SMI, DI, SMA, SMP, SMC, SV, STU) o 18 master\n📅 **EDT o exams** : mawa3id, modalités, compensation, rattrapage\n📊 **Rasultats** : fin tchoufhom, kifash tcontesta chi note\n💼 **Stages o PFE** : kifash tjib stage, kifash tdir convention, soutenance\n💰 **Lminha** : ONOUSC, mérite, kifash ttalab\n🎓 **Diploma** : retrait, attestations, légalisation\n🏠 **La vie d'étudiant** : cité U, resto, transport, clubs\n\nSawalni 3la ay haja, ana 7afed kolchi mn 3and 60+ catégories.\n\n💡 **9oder t9oli liya** : « Kifash ntsajjel f DI ?  Achno tafassil dyal master IADS ? Bghit n3rf 3la lminha... »\n\nWa khoud li ana n9der nfhem darija b zaffa, francais o englais !"
+        ]
+      }
+    },
+    {
+      "tag": "inscription",
+      "category": "inscription",
+      "icon": "📋",
+      "patterns": {
+        "fr": ["Comment s'inscrire à la FSBM","Procédure d'inscription","Je veux m'inscrire","Inscription en première année","Documents nécessaires pour l'inscription","Comment s'inscrire en licence","Comment intégrer la FSBM"],
+        "en": ["How to enroll at FSBM","Enrollment procedure","I want to register","First-year registration","Documents needed for enrollment","How to register for bachelor","How to join FSBM","Admission process"],
+        "darija": [
+          "Kifash ntsajjel f FSBM","Kifash n9der ndkhol l FSBM","Bghit ntsajjel f FSBM","Bghit ndkhol l fac",
+          "Wesh khassni bach ntsajjel","Achno l'documents li khasni",
+          "Lprocedure dyal tassjil","Etapes dyal tassjil","Kifash ndir tassjil",
+          "Tassjil f l3am lawl","Kifash ntsajjel f licence","Bghit ntsajjel f l3am lawl",
+          "Wach ndkhol l FSBM","Kifash nwajjed dossier dyal tassjil","Kifash ndir dossier d l'inscription",
+          "Imta katfta7 l'inscription","Imta khasni ntsajjel","Imta katfta7 lbab dyal tassjil",
+          "Chno khassni bach ndkhol FSBM","Sh7al kayswa tassjil","Sh7al katkhalas dossier",
+          "Kifash nakhud chi place f FSBM","Bghit n9der ntsajjel khoud lik chi info",
+          "Najaht f bac kifash ntsajjel","3andi bac achno ndir","Khassni chi 7aja l tassjil"
+        ]
+      },
+      "responses": {
+        "darija": [
+          "📋 **Tassjil f FSBM — l'étapes b tafassil :**\n\n**1️⃣ Préinscription online :**\nMchi l preins.univh2c.ma o kml lformulaire : smiti, smiya, lcin, lemail, raqm dyal tel, ikhtiyar dyal filiya (SMI, DI, SMA, SMP, SMC, SV, STU).\nKhaslek tprintihi b3da ma kemmlti.\n\n**2️⃣ Wajjed dossier dyalek :**\n• Diploma dyal bac (original + copie certifiée conforme)\n• CIN (copie b mouchaba9a)\n• 4 t9awer 35×45 mm récentes (chi 30 dh f studio)\n• Formulaire dyal tassjil mkhdoum o mwa9a3\n• Reçu dyal paiement (kayna li drouriya kayn li gratuite — 9ad 200 dh)\n• Acte d naissance (3 chhour b 7al)\n• Attestation dyal bac (li 3andek lbac jdid)\n\n**3️⃣ Saiib dossier :**\nMchi l service dyal scolarité f FSBM, lbatiment dyal l'admin, 1er étage.\n• L'horaires : 9h - 12h o 14h - 16h30, mn tnin l jem3a\n• Lperiod : juillet → septembre (généralement)\n\n**4️⃣ Khoud lkarta dyal student :**\nMn b3d ma yvalidouw lik dossier, kayn-jib lik la convocation. Tji tkhod lkarta f mn b3d (3la 9bel 2 simanat).\n\n📞 **Contact scolarité** : 05 22 70 46 71\n📧 scolarite@fsbm.ac.ma\n\n💡 **Conseils mhammin :**\n• Wajjed dossier b zerba (avant juillet idéalement)\n• Si t cheek b chi 7aja, wajjed b copies extras\n• Khlik kayna copies dyal CIN o bac f kayn (drouri kayna)\n• Ila kayna chi soual khass, ttassel direct b scolarité\n\nWach 3andek chi soual akhor 3la tassjil ?"
+        ],
+        "fr": [
+          "📋 **Inscription FSBM — étapes détaillées :**\n\n**1️⃣ Préinscription en ligne**\nRends-toi sur preins.univh2c.ma. Remplis le formulaire complet (nom, prénom, CIN, email, téléphone, choix de filière : SMI, DI, SMA, SMP, SMC, SV, STU). Imprime le récépissé.\n\n**2️⃣ Préparer ton dossier**\n• Bac (original + copie certifiée)\n• CIN (copie)\n• 4 photos d'identité 35×45 mm récentes\n• Formulaire d'inscription rempli et signé\n• Reçu de paiement (~200 DH selon profil — gratuit pour boursiers confirmés)\n• Acte de naissance (moins de 3 mois)\n• Attestation de réussite au bac (si bac récent)\n\n**3️⃣ Dépôt à la scolarité**\nBâtiment administratif, 1er étage. Horaires : 9h-12h / 14h-16h30 (lundi-vendredi). Période : juillet → septembre.\n\n**4️⃣ Retirer la carte d'étudiant**\nAprès validation (~2 semaines), tu reçois une convocation pour récupérer ta carte.\n\n📞 Scolarité : 05 22 70 46 71  📧 scolarite@fsbm.ac.ma\n\n💡 **Conseils :** dépose tôt (juillet), garde toujours des copies de réserve, attestation bac récente si bac de l'année."
+        ],
+        "en": [
+          "📋 **FSBM Enrollment — Step-by-step:**\n\n**1️⃣ Online pre-registration**\nGo to preins.univh2c.ma. Fill the form (name, ID, email, phone, program choice: SMI, DI, SMA, SMP, SMC, SV, STU). Print the receipt.\n\n**2️⃣ Prepare your file**\n• Baccalaureate (original + certified copy)\n• National ID (copy)\n• 4 recent ID photos 35×45 mm\n• Signed enrollment form\n• Payment receipt (~200 MAD; free for confirmed scholarship holders)\n• Birth certificate (less than 3 months old)\n• Bac success certificate (if recent)\n\n**3️⃣ Submit to admissions**\nAdmin building, 1st floor. Hours: 9-12 / 14-16:30 (Mon-Fri). Period: July → September.\n\n**4️⃣ Get your student card**\nAfter validation (~2 weeks), you'll be summoned to collect your card.\n\n📞 Admissions: +212 5 22 70 46 71  📧 scolarite@fsbm.ac.ma"
+        ]
+      }
+    },
+    {
+      "tag": "reinscription",
+      "category": "reinscription",
+      "icon": "🔁",
+      "patterns": {
+        "fr": ["Comment se réinscrire","Réinscription","Renouveler mon inscription","Je veux me réinscrire","Réinscription en ligne","Quand se réinscrire"],
+        "en": ["How to re-enroll","Re-enrollment","Renew my registration","I want to re-register","Online re-enrollment","When to re-register"],
+        "darija": [
+          "Kifash n3awd ntsajjel","Bghit n3awd ntsajjel","Kifash ndir réinscription",
+          "Tassjil mn jdid","Bghit njedded tassjil dyalek","Bghit n3awd tassjil",
+          "Renewal dyal l'inscription","Imta kayn re-inscription","Imta khassni n3awd ntsajjel",
+          "Kifash n3awd njedded f l3am jdid","Bghit n3awd ntsajjel 3andi modules f dette",
+          "3andi imti7anat machi mzyann kifash n3awd ntsajjel","Kifash n3awd ntsajjel ila redouble"
+        ]
+      },
+      "responses": {
+        "darija": [
+          "🔁 **Réinscription f FSBM 2025/2026 — kifash tdir :**\n\n**1️⃣ Connection l portail dyal student :**\nMchi l ent.univh2c.ma\nLogin : Apogée dyalek (raqm 8 chiffres)\nPassword : ila 3andek déjà, gher dakhel. Ila kanchti nsiti, klik 3la \"mot de passe oublié\"\n\n**2️⃣ 3mer formulaire :**\nKhtar :\n• Filiya li khassek t9ra (3adattan ttkml b l'ordre, ila bghiti tbeddel khaslek tmchi l scolarité)\n• L3am dyal drassa li tkhassel\n• Group ila kayn ikhtiyar\n\n**3️⃣ Khalas lflouss :**\n• ~200 DH (variable 3la 7sab statut)\n• T9der tkhalas online b crédit card / paiement mobile\n• Wla 3awd tmchi l service finance b l'cash\n\n**4️⃣ Reçu :**\n• B3d ma tkhalsi, tba3 reçu (PDF)\n• Lse9 jouj t9awer 3lih ila kant katlbo\n\n**5️⃣ Dépôt (parfois) :**\n• 3la 7sab statut dyalek, b3d lmarrat khassek tsaiib dossier f scolarité\n• Khouss li 3andou modules f dette : OBLIGATOIRE tmchi l scolarité (mb9ach katlheb online ghir b la machine)\n\n⏰ **La période :** Generalement septembre. Khlik tcheek site dyal FSBM o page Facebook bach mat nsache.\n\n⚠️ **Mochkilat 3adiyya :**\n• Mot de passe ENT nsitih → ttassel b service info\n• Mochkila f paiement → 3awed b chi navigateur akhor (Chrome wla Firefox)\n• Erreur f formulaire → khoud screenshot o sift l scolarité\n\n📞 Scolarité : 05 22 70 46 71"
+        ],
+        "fr": [
+          "🔁 **Réinscription FSBM 2025/2026 :**\n\n**1️⃣ Portail étudiant** : ent.univh2c.ma (Apogée + mot de passe)\n**2️⃣ Formulaire** : choix filière, année, groupe\n**3️⃣ Paiement** : ~200 DH (en ligne ou caisse FSBM)\n**4️⃣ Reçu** : imprimer, coller 2 photos\n**5️⃣ Dépôt** : obligatoire si modules en dette → scolarité en personne\n\n📅 Période : septembre\n⚠️ Étudiants en dette → scolarité obligatoire\n📞 05 22 70 46 71"
+        ],
+        "en": [
+          "🔁 **FSBM Re-enrollment 2025/2026:**\n\n**1️⃣ Portal**: ent.univh2c.ma (student ID + password)\n**2️⃣ Form**: program, year, group\n**3️⃣ Payment**: ~200 MAD (online or campus)\n**4️⃣ Receipt**: print, attach 2 photos\n**5️⃣ Submission**: required if failed modules → in-person admissions\n\n📅 Period: September\n📞 +212 5 22 70 46 71"
+        ]
+      }
+    },
+    {
+      "tag": "filieres",
+      "category": "filieres",
+      "icon": "📚",
+      "patterns": {
+        "fr": ["Quelles sont les filières","Les filières de la FSBM","Quelles formations proposez-vous","Liste des filières","Filières disponibles","Combien de filières"],
+        "en": ["What programs are available","FSBM programs","What courses do you offer","List of programs","Available majors","How many programs"],
+        "darija": [
+          "Achno l'filiyat","Achno l'filiyat dyalkom","Achno l'filiyat dyal FSBM","Achno katqaddmou",
+          "L'filiyat dyal FSBM","Lista dyal l'filiyat","Wesh kayna filiyat","Wach 3andkom filiyat",
+          "Sh7al mn filiya","Sh7al kayna filiyat","Sh7al 3andkom filiya",
+          "Achno khassni nkhtar","Achno l ahsen filiya","Achno l'filiyat lmtawjda",
+          "Bghit chouf l'filiyat","3atini lista dyal l'filiyat","Goul li achno kayqarra f FSBM"
+        ]
+      },
+      "responses": {
+        "darija": [
+          "📚 **L'filiyat dyal FSBM — kollchi b tafassil :**\n\nFSBM 3andha **7 filiyat dyal licence** + **18 master**. Ana nfasselhom lik 7da b 7da :\n\n**🅻 LICENCES (3 snin / 6 semestres) :**\n\n💻 **SMI** — Sciences Math o Informatique\n   → 9rayya 3la math, algo, programmation (C, Java, Python), BDD, réseaux, IA\n   → 7 m3a math fil-bac\n\n🖥️ **DI** — Développement Informatique (pro)\n   → 9rayya pratique : web (Angular, React), mobile, DevOps, cloud, sécurité\n   → Selection 3la dossier + interview parfois\n   → Khdma direct mn b3d licence\n\n📊 **SMA** — Sciences Math o Applications\n   → Math pures + statistique + modélisation\n   → Concours dyal mhandsin\n\n⚛️ **SMP** — Sciences dyal Matière Physique\n   → Physique, énergétique, matériaux\n\n🧪 **SMC** — Sciences dyal Matière Chimie\n   → Chimie organique, analytique, environnement\n\n🌱 **SV** — Sciences dyal lHayat (Biologie)\n   → Biologie, génétique, microbiologie, biotech\n\n🌍 **STU** — Sciences dyal lArd o lKawn\n   → Géologie, hydrogéologie, environnement\n\n**🅼 MASTERS (2 snin) — 18 spécialités :**\n\nKayna f kol département masters dyal mostawa 3ali :\n• IA o Data Science (IADS) ⭐ mzyan bzaf\n• Sécurité numérique (SECNUM)\n• MIAGE, IDSI, MMA, MR-MATHS\n• Énergies renouvelables (MENRG), Matériaux\n• Biotechnologie, Microbiologie\n• o ghirhom...\n\n💡 **Kifash tkhtar filiya ?**\nIla bghiti khdma direct : **DI** (très orienté pratique)\nIla bghiti continued m3a master / école d'ingénieur : **SMI** wla **SMA**\nIla 3andek shouf m3a sciences naturelles : **SV** wla **STU**\nIla bghiti recherche / labos : **SMP** wla **SMC**\n\nGoul li 3la chi filiya b smiha o ana n3tik tafassil aktar !"
+        ],
+        "fr": [
+          "📚 La FSBM propose **7 licences** + **18 masters** :\n\n**Licences :**\n💻 **SMI** Sciences Math & Informatique\n🖥️ **DI** Développement Informatique (pro)\n📊 **SMA** Sciences Math & Applications\n⚛️ **SMP** Physique\n🧪 **SMC** Chimie\n🌱 **SV** Sciences de la Vie\n🌍 **STU** Sciences de la Terre\n\n**Masters phares :**\nIADS (IA), SECNUM (cybersec), MIAGE, IDSI, biotech, énergies renouvelables, imagerie médicale…\n\nDemande-moi des détails sur une filière précise !"
+        ],
+        "en": [
+          "📚 FSBM offers **7 bachelor's programs** + **18 master's degrees**:\n\n**Bachelor's:**\n💻 SMI — Math & CS\n🖥️ DI — Software Development\n📊 SMA — Math & Applications\n⚛️ SMP — Physics\n🧪 SMC — Chemistry\n🌱 SV — Life Sciences\n🌍 STU — Earth Sciences\n\n**Notable Masters:**\nIADS (AI), SECNUM (cybersec), MIAGE, IDSI, biotech, renewables, medical imaging…\n\nAsk me about a specific program!"
+        ]
+      }
+    },
+    {
+      "tag": "filiere_smi",
+      "category": "filieres",
+      "icon": "💻",
+      "patterns": {
+        "fr": ["C'est quoi la filière SMI","Sciences Mathématiques et Informatique","Filière SMI","Programme SMI","Débouchés SMI"],
+        "en": ["What is SMI","Computer Science program","SMI program","SMI courses","SMI career opportunities","Math and CS major"],
+        "darija": [
+          "Chno SMI","Filiya SMI","Hadi chno SMI","Wesh hiya SMI","Goul liya 3la SMI",
+          "Achno katqraw f SMI","Wesh kayn f SMI","Achno l brogramme dyal SMI","Programme dyal SMI",
+          "L'avenir m3a SMI","Khdma m3a SMI","Achno tkmel mn b3d SMI","Wach SMI mzyan",
+          "Sh7al katswa SMI","Bghit ndkhol SMI achno nhar khassni"
+        ]
+      },
+      "responses": {
+        "darija": [
+          "💻 **SMI — Sciences Math o Informatique**\n\n🎯 **L'idée :** filiya li katjma3 math o informatique. Katkawwan informaticien b base dyal math 9wiya. Hadi men ahsen lfiliyat ila kanchti bghiti tkmel m3a master IA wla école d'ingénieur.\n\n📖 **Achno katqra ?**\n\n*Semestres 1-2 (al-3am lawal) :*\n• Algèbre, Analyse, Logique\n• Algorithmique (b langage C / Python)\n• Architecture dyal ordinateur\n• Physique générale\n\n*Semestres 3-4 (al-3am thanya) :*\n• Programmation Java / POO\n• Bases de données (MySQL, PL/SQL)\n• Réseaux informatiques\n• Probabilités o Statistique\n• Système d'exploitation (Linux)\n\n*Semestres 5-6 (al-3am thalta) :*\n• Intelligence Artificielle\n• Machine Learning\n• Génie Logiciel + UML\n• Programmation mobile (Android)\n• Cybersécurité\n• **PFE / Stage** (S6) — 3-4 chhour f sherka\n\n⏱️ **Mdat :** 3 snin (6 semestres)\n📋 **Wach khasni n9bel ?** Bac scientifique (SM A wla SM B wla SP)\n\n🎓 **Khdma mn b3d SMI :**\n• **Master IADS** (IA) ⭐ recommended\n• Master MIAGE (info de gestion)\n• Master Sécurité numérique\n• Master Recherche f math wla info\n• Concours ENSIAS, INPT, ENSAM\n• Direct work : développeur, data analyst (avec mn7a)\n\n💡 **L'9adiyya :** SMI ahssn ila bghiti **continuation o master/école**. Ila bghiti **khdma direct**, kayn **DI** (Développement Informatique) li hiya plus pratique.\n\n💰 **Salaires after master/ingénieur :** 8000-15000 DH/chhar f Maroc, 30k-50k EUR/sana f la France\n\nWach bghiti tssawel chi 7aja akhor 3la SMI ?"
+        ],
+        "fr": [
+          "💻 **SMI — Sciences Math. et Informatique**\n\n🎯 Former des informaticiens avec base maths solide.\n\n📖 **Modules :** Algèbre, Analyse, Algorithmique, POO Java, BDD, Réseaux, IA, ML, Génie Logiciel, Mobile, PFE.\n\n⏱️ 3 ans (6 semestres) — Bac scientifique requis\n🎓 **Débouchés :** Master IA, MIAGE, écoles d'ingé (ENSIAS, INPT), devs, data scientists.\n💰 8-15k DH/mois après master au Maroc."
+        ],
+        "en": [
+          "💻 **SMI — Math. & Computer Sciences**\n\n🎯 Train software engineers with strong math foundation.\n\n📖 **Modules:** Algebra, Algorithms, OOP, Databases, Networks, AI, ML, Software Engineering, Mobile, Final Project.\n\n⏱️ 3 years — Science Bac required\n🎓 **Careers:** AI Master's, engineering schools, dev/data scientist roles.\n💰 8-15k MAD/month after master's in Morocco."
+        ]
+      }
+    },
+    {
+      "tag": "filiere_di",
+      "category": "filieres",
+      "icon": "🖥️",
+      "patterns": {
+        "fr": ["C'est quoi la filière DI","Développement Informatique","Filière DI","Programme DI","Débouchés DI"],
+        "en": ["What is DI","Software development program","DI program","DI courses","Web development major"],
+        "darija": [
+          "Chno DI","Filiya DI","Hadi chno DI","Wesh hiya DI","Goul liya 3la DI",
+          "Achno katqraw f DI","Bghit ntsajjel f DI","Wach DI mzyan","DI wla SMI ahssn",
+          "Wach DI katdir khdma","Khdma m3a DI","DI kifash katwlli developpeur",
+          "Achno l fer9 bin DI o SMI","Wach DI séléctive","Wesh sahla l DI",
+          "DI bghit nkmel master 7da","Sh7al kayswa DI"
+        ]
+      },
+      "responses": {
+        "darija": [
+          "🖥️ **DI — Développement Informatique (Licence Pro)**\n\n🎯 **L'idée :** filiya **pratique-pratique** li katkawwen developpeur full-stack jaheh l khdma direct. Mafiha chi math nadariyya bzaf. Lkolchi project-based o hands-on.\n\n📖 **Achno katqra ?**\n\n*Semestres 1-2 :*\n• Algo o introduction l programmation (C, Python)\n• HTML/CSS/JS base\n• Architecture base\n• Bases dyal mathématiques (light)\n\n*Semestres 3-4 :*\n• **Front-end** : JavaScript avancé, React wla Angular\n• **Back-end** : Node.js, PHP/Laravel\n• Bases de données SQL/NoSQL\n• UX/UI design\n• Tests + déploiement\n\n*Semestres 5-6 :*\n• **Mobile** : Android Kotlin, iOS Swift, Flutter\n• **DevOps** : Docker, CI/CD, Git avancé\n• **Cloud** : AWS, Azure, GCP\n• **Sécurité** applicative\n• Microservices o architecture moderne\n• **PFE / Stage** — 4 chhour f sherka (souvent + offre embauche)\n\n⏱️ **Mdat :** 3 snin\n📋 **Wach khasni ?** Bac scientifique + selection 3la dossier (note bac, motivation)\n\n🎯 **Fer9 entre DI o SMI :**\n| Critère | DI | SMI |\n|---------|----|----|\n| Math | Light | Forte |\n| Programmation | Pratique | Théorique + Pratique |\n| Master after | Difficile (manque math) | Facile |\n| Khdma direct | ⭐ Très facile | OK |\n| Selection | Plus dure | Moins dure |\n\n🎓 **Khdma after DI :**\n• **Developpeur full-stack** (web, mobile)\n• **DevOps engineer**\n• **Intégrateur**\n• **Consultant IT junior**\n• Parfois sherkat kaykhuduw direct mn lstage (ESI Pyrene, Capgemini, Sopra, Outsourcia, Atos...)\n\n💰 **Salaires :**\n• Junior : 6000-10000 DH/chhar\n• 2 sana xp : 12000-18000 DH/chhar\n• Senior : 20000-35000+ DH/chhar f Casa\n• Remote pour Europe : 4000-8000 EUR/chhar 🚀\n\n💡 **Conseil :** DI hiya **mzyana bzaf** ila bghiti tkhdem mlla7 mn b3d licence. Ila bghiti master + thèse, akhouet 3la SMI.\n\nWach bghiti tssawel 3la admission wla 3la programme b tafassil aktar ?"
+        ],
+        "fr": [
+          "🖥️ **DI — Développement Informatique (Licence Pro)**\n\n🎯 Former des développeurs full-stack opérationnels dès la sortie.\n\n📖 **Modules :** HTML/CSS/JS, Angular/React, Node.js, BDD, Mobile (Android/iOS/Flutter), DevOps (Docker, CI/CD, cloud), Sécurité, PFE 4 mois.\n\n⏱️ 3 ans — Bac scientifique + sélection sur dossier\n🎓 **Débouchés :** dev full-stack, devops, intégrateur, consultant IT.\n💰 Junior 6-10k DH, 2 ans XP 12-18k, senior 20-35k+ DH/mois (Casa)."
+        ],
+        "en": [
+          "🖥️ **DI — Software Development (Vocational Bachelor)**\n\n🎯 Train operational full-stack developers ready for the job market.\n\n📖 **Modules:** HTML/CSS/JS, Angular/React, Node.js, Databases, Mobile (Android/iOS/Flutter), DevOps, Cloud, Security, 4-month internship.\n\n⏱️ 3 years — Science Bac + selection\n🎓 **Careers:** full-stack dev, devops, integrator, IT consultant.\n💰 Junior 6-10k MAD, mid 12-18k, senior 20-35k+ MAD/month."
+        ]
+      }
+    },
+    {
+      "tag": "masters",
+      "category": "masters",
+      "icon": "🎓",
+      "patterns": {
+        "fr": ["Quels masters","Liste des masters","Masters disponibles","Masters FSBM","Master IA","Master sécurité"],
+        "en": ["What master's degrees","Master's programs","FSBM masters","AI master","Cybersecurity master"],
+        "darija": [
+          "Achno l'masters","Achno l'masters mawjudin","Wach kayn masters","Lista dyal master",
+          "Master dyal FSBM","Wesh 3andkom master","Sh7al 3andkom master","Achno khassni master",
+          "Master IA wesh kayn","Master Sécurité","Master IADS","Master MIAGE",
+          "Bghit nkmel master","Achno l ahsen master","Master apres licence achno khasni dir"
+        ]
+      },
+      "responses": {
+        "darija": [
+          "🎓 **L'masters dyal FSBM — 18 spécialité :**\n\nFSBM 3andha masters mtnaw3in f kol département. Hadi lista kamla :\n\n**💻 Math o Informatique (7 masters) :**\n• **MIAGE** — Informatique o Gestion (chouff sherkat business)\n• **IDSI** — Système d'Information décisionnels (Data Warehouse, BI)\n• **IADS** ⭐ — IA o Data Science (mzyan bzaf, sélection compétitive)\n• **SECNUM** ⭐ — Sécurité Numérique o Cryptographie (cybersécurité)\n• **MMA** — Math Appliquées (statistique, modélisation, finance quant.)\n• **MR-MATHS** — Recherche f Math (thèse after)\n• **MEDU-MI** — Didactique math/info (3lim secondaire)\n\n**⚛️ Physique (3 masters) :**\n• **MRP** — Imagerie Médicale o Radioprotection\n• **MENRG** — Énergies Renouvelables\n• **MMAT** — Matériaux o Nanotechnologies\n\n**🧪 Chimie (2 masters) :**\n• **MCAE** — Chimie Analytique o Environnement\n• **MCOI** — Chimie Organique Industrielle\n\n**🌱 Biologie (4 masters) :**\n• **MBIOT** — Biotechnologie o valorisation plantes\n• **MMOLEC** — Biologie Moléculaire o Cellulaire\n• **MMICRO** — Microbiologie Appliquée\n• **MEDU-SV** — Didactique SVT\n\n**🌍 Géologie (2 masters) :**\n• **MENV** — Géosciences o Environnement\n• **MGAP** — Géologie Appliquée o Patrimoine\n\n📋 **Conditions générales :**\n• Licence validée (avec ahsan dossier)\n• Concours écrit + interview parfois\n• Capacité limited (15-30 places / master)\n• Period dyal candidature : Mai → Juillet\n\n💡 **Achno tkhtar ?**\n• Bghiti khdma f tech ? → **IADS** wla **SECNUM** wla **MIAGE**\n• Bghiti recherche / thèse ? → **MR-MATHS** wla **MMOLEC**\n• Bghiti tdir mhand ? → **MENRG** wla **MMAT**\n• 7anin l 3lim ? → **MEDU-MI** wla **MEDU-SV**\n\n🎯 **L'masters lkter selectivité :** IADS, SECNUM, MR-MATHS — khassek dossier 9awi (Mention Bien minimum)\n\nGoul li 3la chi master b smitou o ana n3tik tafassil b zaffa !"
+        ],
+        "fr": [
+          "🎓 FSBM propose **18 masters** répartis sur les 5 départements :\n\n**Math-Info :** MIAGE, IDSI, IADS (IA), SECNUM (cybersec), MMA, MR-MATHS, MEDU-MI\n**Physique :** MRP (imagerie médicale), MENRG (énergies), MMAT (matériaux)\n**Chimie :** MCAE, MCOI\n**Biologie :** MBIOT, MMOLEC, MMICRO, MEDU-SV\n**Géologie :** MENV, MGAP\n\nDemande-moi un master précis pour les détails."
+        ],
+        "en": [
+          "🎓 FSBM offers **18 master's degrees** across 5 departments:\n\n**Math-CS:** MIAGE, IDSI, IADS (AI), SECNUM (cyber), MMA, MR-MATHS, MEDU-MI\n**Physics:** MRP, MENRG, MMAT\n**Chemistry:** MCAE, MCOI\n**Biology:** MBIOT, MMOLEC, MMICRO, MEDU-SV\n**Geology:** MENV, MGAP\n\nAsk about a specific one for details."
+        ]
+      }
+    },
+    {
+      "tag": "master_iads",
+      "category": "masters",
+      "icon": "🤖",
+      "patterns": {
+        "fr": ["Master IADS","Master IA","Master Intelligence Artificielle","Master Data Science"],
+        "en": ["IADS master","AI master","Master Data Science","Artificial Intelligence master","Machine learning master"],
+        "darija": [
+          "Master IADS","Master IA","Master dyal Data Science","Master dyal IA",
+          "Bghit nkmel master IADS","Wach IADS mzyan","Sh7al places f IADS",
+          "Achno khassni l IADS","Selection dyal IADS sa3iba","Programme dyal IADS"
+        ]
+      },
+      "responses": {
+        "darija": [
+          "🤖 **Master IADS — Intelligence Artificielle o Data Science**\n\nHadi mn ahsen masters dyal FSBM, mzyan bzaf l mostakbal. Sélection sa3iba mais mzyan jiddan.\n\n📖 **Programme (2 snin / 4 semestres) :**\n\n*Semestre 1 :*\n• Math l IA (algèbre linéaire avancée, optimisation, théorie information)\n• Machine Learning fondamental (SVM, arbres décision, ensembles, scikit-learn)\n• Bases de données Big Data (MongoDB, Cassandra, Elasticsearch)\n• Python avancé l Data Science (NumPy, Pandas, Matplotlib)\n\n*Semestre 2 :*\n• Deep Learning (réseaux neuronaux, CNN, RNN, TensorFlow, PyTorch)\n• NLP — Natural Language Processing (Word2Vec, BERT, GPT, transformers)\n• Big Data Engineering (Hadoop, Spark, Kafka, streaming)\n• Éthique IA o IA responsable (biais, fairness, RGPD, AI Act)\n\n*Semestre 3 :*\n• Vision par ordinateur (OpenCV, segmentation, détection, GANs)\n• MLOps o déploiement IA (CI/CD pour ML, monitoring, serving)\n• Reinforcement Learning (Q-Learning, Deep RL)\n• Projet IA entreprise (5-6 simanat)\n\n*Semestre 4 :*\n• **Stage de Recherche / Industriel** — 5-6 chhour\n• Soutenance + mémoire\n\n📋 **Conditions d'accès :**\n• Licence f informatique / math (SMI, SMA, DI parfois)\n• Excellent dossier (Mention AB minimum, idéalement Bien)\n• Concours écrit (math + algo + programmation)\n• Interview de motivation\n\n📅 **Candidature :** Mai → Juillet kol 3am\n👥 **Places :** ~25 / promo (très selective)\n\n🎓 **Khdma after IADS :**\n• Data Scientist 🌟 (très demandé, salaires hauts)\n• Ingénieur ML / Deep Learning\n• Chercheur IA (avec thèse)\n• Consultant IA\n• Data Engineer\n• MLOps engineer\n\n💰 **Salaires :**\n• Junior data scientist Maroc : 12000-20000 DH/chhar\n• 2-3 sana xp : 25000-40000 DH/chhar\n• Remote Europe/US : 5000-12000 EUR/chhar 💸\n• Startups MA recente (Atlanmod, Toumai, AnSwers...) : 8000-15000 DH + actions\n\n💡 **Conseil hammin :**\nIla bghiti IADS, **bda mn daba** tkhdem 3la :\n• Python + scikit-learn (kayna formations f Coursera majji)\n• Kaggle competitions (lkurit dyalek mli7 f selection)\n• GitHub portfolio (1-2 projects ML)\n• English (ressources kollhom b englais)\n\n🔥 **Coordinator :** Pr. Mehdi FILALI — m.filali@fsbm.ac.ma\n\nWach 3andek chi soual akhor 3la IADS ?"
+        ],
+        "fr": [
+          "🤖 **Master IADS — IA & Data Science** (excellent master FSBM)\n\n📖 **Programme :** Math pour IA, ML, Deep Learning, NLP (BERT/GPT), Vision, Big Data (Spark, Kafka), MLOps, RL, Éthique IA. + Stage 5-6 mois en S4.\n\n📋 **Accès :** Licence info/math avec excellent dossier + concours + entretien. ~25 places.\n📅 Candidature : mai → juillet.\n\n🎓 **Débouchés :** Data scientist 🌟, ingénieur ML, consultant IA, doctorat.\n💰 12-20k DH junior, 25-40k+ après 3 ans (5-12k€ en remote)."
+        ],
+        "en": [
+          "🤖 **IADS Master — AI & Data Science** (top FSBM master)\n\n📖 **Curriculum:** Math for AI, ML, Deep Learning, NLP, Computer Vision, Big Data (Spark, Kafka), MLOps, Reinforcement Learning, AI Ethics. + 5-6 month internship.\n\n📋 **Admission:** Math/CS bachelor with excellent record + entrance exam + interview. ~25 seats.\n📅 Applications: May → July.\n\n🎓 **Careers:** Data scientist 🌟, ML engineer, AI consultant, PhD."
+        ]
+      }
+    },
+    {
+      "tag": "emploi_du_temps",
+      "category": "emploi_temps",
+      "icon": "📅",
+      "patterns": {
+        "fr": ["Emploi du temps","Où trouver l'emploi du temps","Horaires des cours","Planning","EDT"],
+        "en": ["Class schedule","Where to find timetable","Course timing","Timetable","Schedule","My schedule"],
+        "darija": [
+          "Lemploi du temps","L EDT","Fin n9der nl9a EDT","Fin kayn lemploi du temps",
+          "L7oraires dyal lcoursat","Lplanning dyal lcoursat","Emploi temps dyali",
+          "Wach kayn changement f EDT","EDT dyal SMI","EDT dyal DI",
+          "Imta 3andi cours","Wach hadi simana 3andi tdris","Mhel ya9a3 cours"
+        ]
+      },
+      "responses": {
+        "darija": [
+          "📅 **EDT (Emploi du Temps) — kifash tchoufha :**\n\n**Plusieurs tar9 :**\n\n1️⃣ **Site officiel FSBM** : mchi l www.fsbm.ma o ldoubli 3la \"Emplois du temps\". Khtar filiya dyalek + semestre + group.\n\n2️⃣ **Portail ENT** : ent.univh2c.ma → b Apogée dyalek → section EDT. Hadi katrjik personnalisée 3la 7sab inscription dyalek.\n\n3️⃣ **Panneaux d'affichage** : f kol département (Math-Info, Physique, Chimie, Biologie, Géologie) kayn affichage rasmi.\n\n4️⃣ **Hadi platform** (li nti khdam fiha) → section EDT 3la 7sab filiya o groupe.\n\n5️⃣ **Groupes WhatsApp / Facebook dyal classe** : généralement représentants dyal classe katwarriw screenshots dyal EDT updated.\n\n⚠️ **Mhammin :**\n• EDT katbeddel f l'awwal de chaque semestre (chi 2 simanat dyal stabilisation)\n• Cheek kol simana — kayn changements (prof malade, salle bdellat...)\n• Khlik 7afed numero dyal délégué dyal classe — howa li kayb3et tabddélat\n\n💡 **Conseils dyal student :**\n• Photo l'EDT awwal nhar o khellih f téléphone\n• Setup notification 3la portail ENT bach yji lik update direct\n• Ila 3andek conflit (deux cours f mme heure), mchi direct l département bach itsa7el\n• Ramadan : horaires kaytbeddel — généralement matin gher (9:00-14:00)\n\nWach 3andek mochkila spécifique m3a EDT dyalek ?"
+        ],
+        "fr": [
+          "📅 **Consulter l'emploi du temps :**\n\n1. **Site officiel** : www.fsbm.ma → Emplois du temps (filière + semestre + groupe)\n2. **Portail ENT** : ent.univh2c.ma (personnalisé selon ton inscription)\n3. **Panneaux du département**\n4. **Cette plateforme** (section EDT)\n5. **Groupes WhatsApp** de classe (souvent les plus à jour)\n\n💡 Vérifier chaque semaine — l'EDT change en début de semestre. Ramadan = horaires adaptés (matin uniquement)."
+        ],
+        "en": [
+          "📅 **Check your timetable:**\n\n1. **Official site:** www.fsbm.ma → Schedules\n2. **ENT portal:** ent.univh2c.ma (personalized)\n3. **Department boards**\n4. **This platform** (Schedule section)\n5. **Class WhatsApp groups** (often most up to date)\n\n💡 Check weekly — timetables change at semester start. During Ramadan, morning-only hours apply."
+        ]
+      }
+    },
+    {
+      "tag": "examens",
+      "category": "examens",
+      "icon": "📝",
+      "patterns": {
+        "fr": ["Quand sont les examens","Dates des examens","Période d'examens","Rattrapage","Calendrier examens"],
+        "en": ["When are exams","Exam dates","Exam period","Resit exams","Exam schedule","Make-up exams"],
+        "darija": [
+          "Imta lmti7anat","Imta lexams","Imta 3andna lexams","Dates dyal lexams",
+          "Période dyal lexams","Sh7al baqi l lexams","Bzerba lexams jay",
+          "Rattrapage imta","Imta katsalou rattrapage","Wach 3andi rattrapage",
+          "Calendrier dyal exams","Wesh modalités dyal lexams","Achno t9issim CC o examen",
+          "Wach kayna note éliminatoire","Sh7al note dyal validation"
+        ]
+      },
+      "responses": {
+        "darija": [
+          "📝 **Lexams f FSBM — kollchi li khassek t3ref :**\n\n**📅 Sessions kayna 3 :**\n\n**Session Normale - Hiver (Janvier) :**\n• Modules dyal S1, S3, S5 (semestres dyal kharif)\n• Période : approximativement 10 → 30 Janvier\n• Examen final dyal kol module : 2 sa3a (4 ila lmodule kbir : 3 sa3a)\n\n**Session Normale - Été (Juin) :**\n• Modules dyal S2, S4, S6 (semestres dyal rbi3)\n• Période : 1 → 25 Juin (généralement)\n• Hadi hiya l session lkbira, blkamel 9bel l3otla\n\n**Session Rattrapage (Septembre) :**\n• Bach li mavalidach chi module f sessions normales\n• Période : 1 → 15 Septembre\n• Same exam mais 2eme chance\n\n**📊 Modalités d'évaluation :**\n\n| Composant | Pourcentage | Détails |\n|-----------|-------------|---------|\n| Contrôle Continu (CC) | **25%** | Tests f la classe, TP, projets |\n| Examen Final | **75%** | Examen écrit la salle géante |\n| **Total** | 100% | Note finale /20 |\n\n**✅ Wach validation :**\n• Note ≥ **10/20** = module validé direct\n• Note < 5/20 = **note éliminatoire** ❌ → pas de compensation possible\n• Note entre 5 o 10 = peut-être compensé ila moyenne semestre ≥ 10\n\n**🔄 Compensation :**\nIla kant moyenne dyal semestre kamla ≥ 10/20, kol modules f mantik 5-10 kayvalidouw automatiquement b la compensation. Hadi mzyana ya khoya !\n\n**💡 Conseils dyal student naj7 :**\n\n1. **Bda mn nhar lawwal** : kaykhassek 1 sa3a / jour dyal révision\n2. **CC ahssn cours** : 25% ma3lich, mais bzaf dyal student kanguassbouwha (3ammil li ttkmal)\n3. **Annales (sujets dyal years précédentes)** : kaynin f bibliothèque + groupes Facebook dyal filiya\n4. **Méthode de Pomodoro** : 25 min révision / 5 min pause\n5. **Étude en groupe** : 1-2 sa7ba/sa7eb, mais ma t-perduch waqt f drari\n6. **Sommeil** : 7-8 sa3a chaque nuit pendant les exams — drouri !\n7. **Sport** : 30 min/jour kaynaqe stress\n\n**⚠️ Réclamation :**\nIla chefti note machi mzyana, t9der tedi réclamation **f 48 sa3a** mn l'affichage. Mchi l département b copie dyal examen + demande écrite. Coordinator dyal module kaychouf m3ak.\n\nWach 3andek chi soual specific 3la chi module wla session ?"
+        ],
+        "fr": [
+          "📝 **Examens à la FSBM :**\n\n**Sessions normales :**\n• Hiver (S1/S3/S5) : ~10-30 janvier\n• Été (S2/S4/S6) : 1-25 juin\n\n**Rattrapage :** 1-15 septembre\n\n**Évaluation :** CC 25% + Examen final 75%\n**Validation :** note ≥ 10/20 (5/20 = éliminatoire, pas de compensation)\n**Compensation :** modules entre 5-10 validés si moyenne semestre ≥ 10\n\n⚠️ Réclamation possible dans les 48h après affichage."
+        ],
+        "en": [
+          "📝 **FSBM Exams:**\n\n**Regular sessions:**\n• Winter (S1/S3/S5): ~Jan 10-30\n• Summer (S2/S4/S6): June 1-25\n\n**Resit:** Sep 1-15\n\n**Grading:** CC 25% + Final 75%\n**Pass:** grade ≥ 10/20 (5/20 = eliminatory, no compensation)\n**Compensation:** 5-10 grades validated if semester avg ≥ 10\n\n⚠️ Complaint possible within 48h."
+        ]
+      }
+    },
+    {
+      "tag": "stage_pfe",
+      "category": "stages",
+      "icon": "💼",
+      "patterns": {
+        "fr": ["Comment trouver un stage","Stage de fin d'études","PFE","Convention de stage","Durée du stage"],
+        "en": ["How to find internship","Final-year project","Internship agreement","Internship duration","PFE","Capstone project"],
+        "darija": [
+          "Kifash nl9a stage","Bghit nl9a stage","Mhel n9der nl9a stage","Wesh kayna stages",
+          "Stage PFE","Achno PFE","Wesh khassni l PFE","Imta khassni nbda stage",
+          "Convention dyal stage","Kifash ndir convention","Imta tatkmel convention",
+          "Mdat dyal stage","Sh7al katdouz stage","Stage kayl9a 3iyna bach yegnouni",
+          "Sherkat li katjib stages","Sherkat kanin f Casa li katqbel stages",
+          "Sh7al kayna lflouss f stage","Wach stage kayetkhalas","Stage mkhalsa wla majji"
+        ]
+      },
+      "responses": {
+        "darija": [
+          "💼 **Stage o PFE f FSBM — le guide complet :**\n\n**🎯 Achno PFE ?**\n\nPFE = Projet de Fin d'Études. Hadi l'projet kbir li t-validi licence b iha. Howa :\n• Stage **3-4 chhour minimum** f sherka wla labo recherche\n• **Encadrant FSBM** + **encadrant sherka** kayfollowuk\n• **Mémoire écrit** (40-60 page) + **Soutenance orale** devant jury\n• Mention 3andek kaytsajjel f diploma\n\n**📅 Imta khassek tbda ?**\n\n• **S5 (octobre-décembre)** : bda t9elleb 3la sherkat. Chof CVitek o LinkedIn\n• **S6 (janvier-avril)** : tabchat lstage daba ! Convention katkmel f janvier 3adattan\n• **Avril-Mai** : stage f sherka (3-4 chhour)\n• **Juin** : mémoire + soutenance\n• **Juin-Juillet** : diploma 🎓\n\n**📄 Convention dyal stage — étape par étape :**\n\n1️⃣ Goul lik chi sherka : « Wach katqbel stagiaire ? »\n2️⃣ Sherka katchti CV dyalek + lettre motivation\n3️⃣ Interview (chi 30 min — t9ni + comportementaux)\n4️⃣ Accord verbal : sherka katoulik « OK, candi »\n5️⃣ Mchi l département dyalek : khoud formulaire dyal convention (3 copies)\n6️⃣ 3mer lformulaire : titre dyal stage, dates, encadrants, missions\n7️⃣ Saiib f sherka bach sayyed (mdir wla RH)\n8️⃣ Saiib f FSBM bach sayyed (coordinator dyal filiya + doyen)\n9️⃣ Saiib f scolarité bach 7ttouwh f dossier dyalek\n🔟 Bdla khdmtek f sherka !\n\n**🏢 Sherkat li kanin f Casa o kayqblouwa stagiaires DI/SMI :**\n\n• **Capgemini Maroc** — full-stack, data\n• **Sopra Steria** — développement\n• **Atos Maroc** — IT services\n• **OCP Solutions** — digital transformation\n• **Outsourcia** — software dev\n• **Maroc Telecom** — innovation\n• **Inwi** — digital\n• **Attijariwafa Bank IT** — fintech\n• **BMCE Bank Of Africa IT** — banking IT\n• **Startups : Toumai, Atlanmod, Yo'go, Cosumar Digital**\n\n**💡 Mhel n9elleb ?**\n\n• **LinkedIn** ⭐ — l'plateforme #1, taghni 3andek profile pro\n• **Rekrute.com** — site marocain n°1 dyal khdma\n• **Emploi.ma** — annonces FSBM dialna\n• **Groupes Facebook FSBM** — kaynin chi groupes spéciale (FSBM Alumni, FSBM Carrière)\n• **Stage.ma** — focus 3la stages\n• **Forum Emploi FSBM** (Mai) — événement annuel mzyan bzaf\n• **Réseau** : sawel 3ammak, khalek, 7da li 7ad familtek f l3am asfar\n\n**💰 Lflouss f stage :**\n\n• **Stage non rémunéré** : 0 DH (rare mais kayna)\n• **Stage gratification** : 1500-3000 DH/chhar (most common)\n• **Stage rémunéré** : 3000-6000 DH/chhar (sherkat kbirat, jobs techniques)\n• **Stage f banques / OCP** : 4000-7000 DH/chhar 💸\n\n**📝 Sujet dyal PFE :**\n\nKayna 2 cas :\n• **Sherka katjib lik sujet** : exemple « Développez une app mobile dyal gestion stock »\n• **Nta katjib sujet** : ila bghiti tjib chi haja innovante (ml7it bzaf)\n\n💡 **Conseil :** Sujet should be :\n• Réaliste (kayn t9der t-réalisiha f 3-4 chhour)\n• Mfid l sherka (real problem)\n• Techniquement intéressant (kaykhdem b stack moderne)\n• Mzyan l ton CV (kayban l'recruiters)\n\n**⏱️ Soutenance :**\n\n• 20 minutes présentation (PowerPoint)\n• 10-15 min questions du jury\n• Jury : prof FSBM + encadrant sherka + prof tané\n• Note finale : moyenne dyal jury\n\n**🎯 Nasayih lkbira :**\n\n1. Bda t9elleb mn novembre dyal S5 — pas en mars dyal S6 (taj wssel hadak nhar)\n2. CV mzyan + portfolio (GitHub +++)\n3. LinkedIn complet + actif\n4. Khodm projets personnels : kaynin sujets f Github katdraha b 3ainek\n5. Ila tlbo lik 30k m3a 60k : haka katchti l zb3 sherka\n6. Pas de panic ila ttrefdat 5 sherkat — kollna mritina hadik\n\nWach 3andek chi soual khass 3la convention wla 3la kifash tjib sherka ?"
+        ],
+        "fr": [
+          "💼 **Stage & PFE à la FSBM** :\n\n**PFE :** projet de fin d'études, 3-4 mois en S6, encadrant FSBM + entreprise, mémoire + soutenance.\n\n**Convention** (étapes) : trouver entreprise → formulaire département → signatures (entreprise + encadrant FSBM + doyen) → dépôt scolarité.\n\n**Période :** chercher dès le S5, stage en avril-juin.\n\n**Où chercher :** LinkedIn ⭐, Rekrute.com, groupes Facebook FSBM, Forum Emploi FSBM (mai).\n\n**Rémunération :** 1500-3000 DH (gratification), 3000-6000+ DH (sherkat tech)."
+        ],
+        "en": [
+          "💼 **FSBM Internships & Final-year Projects:**\n\n**PFE:** 3-4 months in S6, FSBM + company supervisor, thesis + defense.\n\n**Convention steps:** find company → department form → signatures → admissions deposit.\n\n**Timing:** Start hunting in S5, intern April-June.\n\n**Where:** LinkedIn ⭐, Rekrute.com, FSBM Facebook groups, FSBM Job Fair (May).\n\n**Stipend:** 1500-3000 MAD (stipend), 3000-6000+ MAD (tech firms)."
+        ]
+      }
+    },
+    {
+      "tag": "diplome",
+      "category": "attestations",
+      "icon": "🎓",
+      "patterns": {
+        "fr": ["Comment retirer mon diplôme","Retrait du diplôme","Attestation de réussite","Quand je reçois mon diplôme"],
+        "en": ["How to collect diploma","Diploma collection","Graduation certificate","When do I get diploma"],
+        "darija": [
+          "Kifash nakhoud diploma","Imta najib diploma","Wach kayn diploma daba",
+          "Retrait dyal diploma","Wach diploma jaheza","Bghit diploma original",
+          "Attestation dyal najah","Attestation provisoire","Wach kayna provisoire 9bel diploma",
+          "Bghit ndir légalisation","Légalisation dyal diploma fin tatkmel",
+          "Wach najahti tssarjiti diploma","Khassrt diploma achno ndir"
+        ]
+      },
+      "responses": {
+        "darija": [
+          "🎓 **Diploma — kollchi dyal retrait :**\n\n**⏰ Imta katjib diploma original ?**\nMn b3d ma katssarji (najahti f lexams + soutenance), khassek tstanna **6 ila 12 chhour** bach yji lik diploma rasmi. Hadi periode l'admin katd9la9 fih dossier dyalek o tba3 diploma sur place.\n\n**📄 Documents lkhasshom :**\n• CIN originale + copie\n• Reçu dyal dépôt (li 3titouh nhar inscription — important bzaf, mat-ddi3uh !)\n• 2 photos d'identité récentes (35×45mm)\n\n**📍 Fin tjibou ?**\nService dyal scolarité (Bâtiment administratif, 1er étage)\nHoraires : 9:00-12:00 o 14:00-16:30 (tnin l jem3a)\n\n**🔥 Hilatay daba — Attestation Provisoire :**\nIla bghiti khdmtek wla concours, tatchti attestation mn daba :\n• 3lik tmchi l scolarité avec CIN + photos\n• Yba3louk attestation provisoire f 3-5 ayam\n• Hadi sa7iha sa3iha jusqu'à ma yji diploma original\n• Khdmtek o écoles kayqblouwha m9awlna provisoire\n\n**🔍 Type dyal attestations :**\n\n| Document | 3lach kayna | Sh7al katddou |\n|----------|-------------|---------------|\n| Attestation Scolarité | Banque, ENT, métro | 24-48h |\n| Attestation Réussite | Embauche, concours | 3-5 jours |\n| Relevé de Notes officiel | Master, écoles | 5-7 jours |\n| Diploma Original | Légalisation, ambassades | 6-12 chhour |\n\n**⚖️ Légalisation dyal diploma :**\nDiploma mn FSBM khass tlégalisih bach takhdem b iha barra :\n1. Mchi l Ministère Enseignement Supérieur (Rabat) — légalisation principale\n2. Mchi l Ministère Affaires Étrangères (Rabat) — légalisation internationale\n3. Mchi l ambassade dyal blad lakhor (b traduction parfois)\n\n💡 **Conseil dyal raha :** ila bghiti diploma légalisé, khassek bdayti b lprocedure mn awwal — kayna 2-3 chhour kamla.\n\n**❌ Kant khsrti diploma ?**\n• Duplicata kayn ! Mchi l scolarité avec :\n  - Déclaration de perte (police)\n  - CIN + copie\n  - Formulaire spécial\n  - 50 DH dyal taxes\n• Yji f 2-3 chhour\n\n📞 Khassek soual ? 05 22 70 46 71"
+        ],
+        "fr": [
+          "🎓 **Retrait du diplôme original :**\n\n**Délai :** 6-12 mois après la fin des études\n**Documents :** CIN + copie, reçu dépôt, 2 photos\n**Où :** Service scolarité (admin, 1er étage)\n\n**Attestation provisoire :** disponible immédiatement (3-5 jours), valable pour embauche/concours.\n\n**Légalisation :** Min. Enseignement Sup → Affaires Étrangères → ambassade (compter 2-3 mois si international).\n\n**Perte :** duplicata possible (déclaration police + 50 DH)."
+        ],
+        "en": [
+          "🎓 **Diploma collection:**\n\n**Delay:** 6-12 months after graduation\n**Documents:** ID + copy, deposit receipt, 2 photos\n**Where:** Admissions office (admin, 1st floor)\n\n**Provisional certificate:** available immediately (3-5 days), accepted for employment/competitions.\n\n**Legalization:** Min. Higher Education → Foreign Affairs → embassy (~2-3 months for international).\n\n**Loss:** duplicate possible (police report + 50 MAD)."
+        ]
+      }
+    },
+    {
+      "tag": "bourses",
+      "category": "bourses",
+      "icon": "💰",
+      "patterns": {
+        "fr": ["Comment avoir une bourse","Bourse d'études","Aide financière","Bourse ONOUSC","Critères bourse"],
+        "en": ["How to get scholarship","Financial aid","ONOUSC scholarship","Scholarship criteria","Student grant"],
+        "darija": [
+          "Kifash nakhoud lminha","Bghit lminha","Wach kayna lminha","Imta katfta7 lminha",
+          "Achno khassni bach nakhoud minha","Critères dyal lminha","Sh7al katjib lminha",
+          "Lflouss dyal lminha","Sh7al kayswa lminha","Lminha katkhalsa mensuel",
+          "Bourse ONOUSC kifash nadirha","Wach katwfa lminha","Kifash narsel demande lminha"
+        ]
+      },
+      "responses": {
+        "darija": [
+          "💰 **Lminha (Bourse) f FSBM — kollchi b tafassil :**\n\n**🏛️ Bourse Nationale ONOUSC** (l'plus commune)\n\nONOUSC = Office National des Œuvres Universitaires Sociales et Culturelles. Howa li kayd9aq lminhar dyal kol student marocain.\n\n**📋 Critères dyal sélection :**\n\n| Critère | Détails |\n|---------|---------|\n| **Revenus familial** | Khassek mn 3a'ila « modeste » (revenue famille < 3000-5000 DH/chhar) |\n| **Distance** | Ila kanchti 3a'iltek b3id mn FSBM (Tata, Errachidia, Tan-Tan...), 7adak ahssn |\n| **Mention dyal bac** | Mention Bien + tji 1ère catégorie (3000+ DH) |\n| **Mostawa academic** | Si tu maintains note mzyana, kayatkhassel lminha |\n\n**💵 Sh7al katjib ?**\n\n• **Catégorie 1** (plus haute) : ~3500 DH/an (mention TB bac, famille modeste, b3id)\n• **Catégorie 2** : ~2500 DH/an\n• **Catégorie 3** : ~2000 DH/an (most common)\n• **Catégorie 4** : ~1500 DH/an\n\n⚠️ Note : Lminha katkhalsa **annuelle** (mra wahda) **pas mensuelle**. Khallah katkhsabha mn awwal sana o tdebbar bha.\n\n**📅 Imta khassek t3mel demande ?**\n\n• Période : **Juillet → Août** (mra wa7da f sana)\n• Site : **www.onousc.ma**\n• Khalla khaslek dossier kamel awwal Juillet — kaywsel tlha bzaf bzaf 3la la fin\n\n**📄 Documents lkhasshom :**\n\n1. **Attestation de scolarité FSBM** (mn scolarité, 1-2 jours)\n2. **Certificat de résidence** (mn la commune, kaywarri b3d famille mn fac)\n3. **Attestation de revenus** dyal walidin :\n   - Ila l'walid mwadhaf : bulletin paie 3 dernier chhour\n   - Ila l'walid retraité : attestation CNSS\n   - Ila l'walid commerçant : declaration sur l'honneur + patente\n   - Ila l'walid agriculteur : attestation chef de Caïdat\n4. **CIN + copie**\n5. **Acte de naissance** (récent, 3 chhour)\n6. **Photo d'identité** récente\n7. **Relevé d'identité bancaire (RIB)** : khassek compte fi nem ban (Attijari, BMCE, Crédit du Maroc, Banque Populaire — tous OK)\n\n**🌟 Bourse Mérite (PEEF) :**\n\nIla 3andak **Mention TB** f bac, t9der ttalab Bourse d'Excellence (PEEF) :\n• ~ 800 DH/chhar pendant la licence (4000-8000 DH/sana ila valida tjib top 10%)\n• Cumulable m3a bourse ONOUSC\n• Demande mra wa7da f début dyal sana\n\n**🎯 Bourse Master / Doctorat :**\n\n• Master : ~ 1500 DH/chhar (selective)\n• Doctorat : ~ 4000 DH/chhar pendant 3 sana\n• Bourses Erasmus+ international : 800-1200 €/chhar (taïi !)\n\n**💡 Conseils dyal raha :**\n\n1. **Préparer dossier mn juillet** — pas en septembre (taj ttkhasr lik)\n2. **Documents originaux** : khlik kayna copies extras f kayn\n3. **RIB ouvert mn jdid** : ouvre compte b ism dyalek (Attijari mzyan, sans frais étudiant)\n4. **Suivre dossier online** : 3la onousc.ma katchouf statut\n5. **Ila trefdouk** : t9der tدpose recours f 30 jours\n\n**⚠️ Hilatay mhammin :**\n\n• Ila d3ifti notes dyalek o tta3atti lminha → kaytwer lik (kaykheliouwha)\n• Ila trefdat fac → lminha aoutomatiquement katanchti\n• Khasselk twkhad lminha = 14 simana/sana 3la 9l (présence drouri)\n\n**🏦 Banque dyal lminha :**\nONOUSC kaykhouz versement direct f compte dyalek. T-versew mra wahda — généralement Décembre.\n\nWach 3andek chi soual specific 3la documents wla 3la dossier ?"
+        ],
+        "fr": [
+          "💰 **Bourse ONOUSC :**\n\n**Critères :** revenus familiaux modestes + distance du domicile + mention au bac\n**Montants :** 1500-3500 DH/an selon catégorie (versement annuel)\n**Période :** demande juillet-août sur **www.onousc.ma**\n\n**Documents :** attestation scolarité, certificat résidence, attestation revenus parents, CIN, RIB.\n\n**Bourse Mérite (PEEF) :** pour bac mention TB, cumulable.\n**Master/Doctorat :** 1500 / 4000 DH/mois respectivement (sélectif).\n\n💡 Préparer dossier dès juillet."
+        ],
+        "en": [
+          "💰 **ONOUSC Scholarship:**\n\n**Criteria:** modest family income + distance from home + bac honors\n**Amount:** 1500-3500 MAD/year by category (annual payment)\n**Period:** apply July-August at **www.onousc.ma**\n\n**Documents:** enrollment cert, residence proof, parents income, ID, bank RIB.\n\n**Merit (PEEF):** for high-honors bac, stackable.\n**Master/PhD:** 1500 / 4000 MAD/month respectively (selective)."
+        ]
+      }
+    },
+    {
+      "tag": "vie_etudiante_darija",
+      "category": "vie_etudiante",
+      "icon": "🌟",
+      "patterns": {
+        "fr": ["Vie étudiante FSBM","Comment c'est la vie d'étudiant"],
+        "en": ["FSBM student life","How is student life"],
+        "darija": [
+          "Kifash la vie d'étudiant","Achno katdir student f FSBM","Wesh la vie d'étudiant zwina",
+          "Conseils l student jdid","Achno khassni n3ref f 1ère année",
+          "Mhel nakal","Mhel n9raw","Sh7al kayna dépenses dyal student","Sh7al katswa la vie d'étudiant",
+          "Wach 3andna logement","Wach kayna cité dyal student","Mhel n9d3 m3a sa7bati"
+        ]
+      },
+      "responses": {
+        "darija": [
+          "🌟 **La vie d'étudiant f FSBM — conseils dyal sahbi :**\n\n**🍽️ L'akl :**\n\n• **Resto Universitaire (Resto U)** géré par ONOUSC\n  - Boursiers : **1,50 DH** ghir (presque gratuit !)\n  - Non-boursiers : 5-10 DH\n  - Horaires : 12:00-14:00 ghir l3chiya (déjeuner)\n  - Menu : tajine, couscous (jem3a), 3jin, yogurt, fruit\n• **Cafétéria FSBM** : sandwich 10-15 DH, café 5 DH\n• **B7da fac** : kayna 3-4 snacks, prix raisonnable (15-25 DH)\n\n**💰 Budget mensuel dyal student moyen :**\n\n| Poste | Budget |\n|-------|--------|\n| L'akl | 600-1000 DH |\n| Transport | 200-400 DH |\n| Photocopies / fournitures | 100-150 DH |\n| Internet / téléphone | 100 DH |\n| Loisirs | 200-300 DH |\n| **Total** | **1200-2000 DH/chhar** |\n\n**🚌 Transport :**\n\n• **Bus ALSA** : routes desservant Ben M'Sick / Sidi Othmane\n  - Carte étudiant ALSA : réduction ~50%, ~200 DH/chhar\n  - Lignes principales : 35, 41, 56, 88 (chouff ALSA.ma bach tta'kid)\n• **Tramway** : pas de station directe, mais bus connection\n• **Taxi grand** : 10-15 DH mn centre Casa\n• **Grab/InDriver** : 15-25 DH (pratique)\n• **Vélo** : kayn quelques étudiants kayrekbouwhom — mzyan o sa7y o yetouffr 3lik 200 DH/chhar\n\n**🏠 Logement :**\n\n• **Cité Universitaire** (gérée ONOUSC) :\n  - 3 cités kanin f Casa : Hassan II, Mohammed V, Driss El Harti\n  - Loyer : ~200 DH/mois (presque rien)\n  - Inscription mn awwal — places limitées (priorité boursiers + b3idin)\n  - Demande : www.onousc.ma\n  - Conditions : revenus famille, distance, mérite académique\n\n• **Colocation b3id Ben M'Sick** :\n  - Chambre dyalek : 800-1500 DH/chhar\n  - Charges (électricité, eau, internet) : 200-400 DH\n  - Total ~1200-2000 DH chambré + 3-4 colocataires\n  - Sources : groupes Facebook FSBM Logement, OLX, Avito\n\n**🎭 Clubs étudiants — chmach3 kayna :**\n\n💻 **Club Informatique** ⭐ : hackathons, ateliers code, conferences\n🤖 **Club Robotique** : compétitions, projets Arduino/Raspberry\n🔬 **Club Sciences** : vulgarisation, expériences\n🌱 **Club Environnement** : nettoyages, sensibilisation\n🎭 **Club Culturel** : théâtre, expositions, musique\n⚽ **Club Sportif** : foot, basket, tennis (tournois inter-facs)\n❤️ **Club Humanitaire** : soutien scolaire enfants quartier, collectes\n🧠 **Club IA & Data Science** : projets ML, compétitions Kaggle\n\nKifash trejjeb ? Bureau d'étudiants (BDE) wla pages Facebook dyal kol club. Cotisation : 0-50 DH/sana.\n\n**🌟 Événements 3la la sana :**\n\n• **Septembre** : Rentrée + accueil 1ère année\n• **Octobre-Novembre** : Journée Portes Ouvertes (JPO)\n• **Décembre** : Préparation lexams\n• **Janvier** : Lexams S1\n• **Février-Mars** : Conferences techniques\n• **Mars** : JPO 2nde édition\n• **Avril** : **Hackathon FSBM** (48h, prix sérieux)\n• **Mai** : **Forum Emploi FSBM** + Stages\n• **Juin** : Lexams S2 + Soutenances PFE\n• **Juin-Juillet** : **Gala** (soirée festive)\n\n**📚 Lieux d'étude :**\n\n1. **Bibliothèque FSBM** : 8:30-17:30, silencieuse, wifi mzyan\n2. **Cafétéria** : moins silencieux, mais convivial\n3. **Salles vides** entre cours : pratique\n4. **Café Lwana / Café Inwa** dans le quartier (~10 DH/heure avec internet)\n5. **B-house** (sherka private) : 30 DH/heure mais luxueux\n\n**💡 10 conseils dyal student naj7 :**\n\n1. **Khaliouwha awwal sana mzyana** : foundations strongs = 3 sana mzyana\n2. **Ttrajja3 m3a saheb mhammin** : il atous-3awnik f exam\n3. **Réseau** : club + activités = sherkat + opportunités\n4. **GitHub portfolio** mn jeddi : projets personnels = CV mzyan\n5. **Anglais** : khouss l master + khdma internationale\n6. **Sport** : 30 min/jour = mzyan l santé o mzyan l notes\n7. **Sleep** : 7-8 sa3a la nuit — drouri\n8. **Réseaux sociaux** : limite, vraiment\n9. **Lecture** : 1 livre/chhar = wisdom\n10. **Stage early** : bda mn S2/S3, ma9bel S6\n\nWach 3andek chi soual hsa3 3la budget wla logement ?"
+        ],
+        "fr": [
+          "🌟 **Vie étudiante FSBM :**\n\n**Restauration :** Resto U (1,50 DH boursier, 5-10 DH non-boursier), cafétérias campus, snacks quartier.\n\n**Budget moyen :** 1200-2000 DH/mois (manger 600-1000, transport 200-400, divers).\n\n**Transport :** Bus ALSA carte étudiant ~200 DH/mois.\n\n**Logement :** Cité U ONOUSC (~200 DH/mois, demande www.onousc.ma) OU colocation (1200-2000 DH/mois).\n\n**Clubs :** Info, Robotique, Sciences, Sport, IA, Culturel, Humanitaire (cotisation 0-50 DH/an).\n\n**Événements :** JPO (mars), Hackathon (avril), Forum Emploi (mai), Gala (juin)."
+        ],
+        "en": [
+          "🌟 **FSBM Student Life:**\n\n**Food:** University Resto (~1.5 MAD boursiers, 5-10 MAD others), cafeterias.\n\n**Average budget:** 1200-2000 MAD/month.\n\n**Transport:** ALSA bus student card ~200 MAD/month.\n\n**Housing:** University residence (~200 MAD/month, ONOUSC) OR shared flats (1200-2000 MAD).\n\n**Clubs:** CS, Robotics, Sciences, Sports, AI, Culture, Humanitarian.\n\n**Events:** JPO (March), Hackathon (April), Job Fair (May), Gala (June)."
+        ]
+      }
+    },
+    {
+      "tag": "contact_scolarite",
+      "category": "contacts",
+      "icon": "📞",
+      "patterns": {
+        "fr": ["Contact scolarité","Numéro scolarité","Comment contacter la scolarité","Email scolarité","Horaires scolarité"],
+        "en": ["Admissions contact","Admissions phone","How to contact admissions","Admissions email","Office hours"],
+        "darija": [
+          "Contact dyal scolarité","Numéro dyal scolarité","Bghit ntsel m3a scolarité",
+          "Email dyal scolarité","L7oraires dyal scolarité","Imta katfta7 scolarité",
+          "Fin office dyal scolarité","Achno bureau dyal scolarité","Mhel kayna scolarité"
+        ]
+      },
+      "responses": {
+        "darija": [
+          "📞 **Service Scolarité FSBM — toutes informations :**\n\n**📍 Localisation :**\nBâtiment administratif, 1er étage (b 9oddam mn l'entrée principale)\n\n**🕐 Horaires d'ouverture :**\n• **Matin** : 9:00 → 12:00\n• **Après-midi** : 14:00 → 16:30\n• **Jours** : Lundi → Vendredi (mafiha samedi sauf inscription chimat)\n• **Ramadan** : 9:00 → 14:00 (sans pause)\n• **Vacances** : permanence 9:00 → 12:00 ghir\n\n**📞 Coordonnées :**\n• **Téléphone** : 05 22 70 46 71\n• **Email** : scolarite@fsbm.ac.ma\n• **Standard FSBM** : 05 22 70 46 71 (mma chi numéro mais 9adam f communication)\n\n**👤 Personnel :**\n• Chef de service Scolarité : Pr. responsable (changeable, ssawel f service nfsah)\n• Plusieurs guichets selon ta filière + ton année\n\n**💡 Mhel mhammin bach trou7 l scolarité :**\n\n1. **Tassjil / réinscription** — septembre + dates spécifiques\n2. **Réclamation note** — f 48 sa3a b3d affichage\n3. **Attestation scolarité / réussite** — kolma katchti\n4. **Relevé de notes officiel** — l master, école, khdma\n5. **Diploma** — 6-12 chhour b3d soutenance\n6. **Convention dyal stage** — signatures\n7. **Changement de filière** — demande spécifique\n8. **Bourse — dossier** — juillet/août\n\n**📋 Achno khassek tjib m3ak :**\n• Carte d'étudiant (toujours)\n• CIN (toujours)\n• Documents specifiques l'demande dyalek (varie selon cas)\n• Patience !! Files d'attente parfois 1-2 sa3a f période de pointe\n\n**🚀 Astuce :**\nSahnit la jem3a soubh (mardi/mercredi/jeudi) 9:00-10:30 = moins crowded. Évite vendredi après-midi (file kbira jiddan).\n\n**📨 Email — kifash tssawel :**\n\nObjet clair : ex. « Réclamation note - module Algorithmique S3 SMI - Code étudiant 12345678 »\n\nCorps mzyan :\n```\nMonsieur/Madame,\n\nJe me permets de vous solliciter concernant [sujet précis].\nMes informations : Nom Prénom - Apogée - Filière - Année.\n\n[Décrire la demande en 3-5 lignes]\n\nMerci pour votre temps,\nNom Prénom\n```\n\n**⚠️ Mochkilat 3adiyya :**\n• Files d'attente longues : mchi nhar lawwal de la simana, tôt\n• Personnel parfois occupé : ttwlou hada mais sit your time \n• Mhammin perdu : sift email b3d l'visite (preuve écrite)\n\nWach 3andek mochkila specific tabghi tssawel scolarité ?"
+        ],
+        "fr": [
+          "📞 **Scolarité FSBM :**\n\n📍 Bâtiment administratif, 1er étage\n🕐 Lundi-Vendredi : 9-12h et 14-16h30 (Ramadan : 9-14h)\n📞 05 22 70 46 71\n📧 scolarite@fsbm.ac.ma\n\n💡 Pour : inscription, attestations, relevés, diplôme, convention stage, bourses, réclamations.\n\nApporter carte étudiant + CIN. Mardi/jeudi 9-10h30 = moins de monde."
+        ],
+        "en": [
+          "📞 **FSBM Admissions:**\n\n📍 Admin building, 1st floor\n🕐 Mon-Fri: 9-12 / 14-16:30 (Ramadan: 9-14)\n📞 +212 5 22 70 46 71\n📧 scolarite@fsbm.ac.ma\n\n💡 For: enrollment, certificates, transcripts, diploma, internship agreements, scholarships, complaints.\n\nBring student card + ID. Tue/Thu 9-10:30 = less crowded."
+        ]
+      }
+    },
+    {
+      "tag": "actualites",
+      "category": "general",
+      "icon": "📰",
+      "patterns": {
+        "fr": ["Actualités FSBM","Quoi de neuf","Annonces","Dernières nouvelles","Infos récentes","News FSBM","Quoi de nouveau"],
+        "en": ["FSBM news","What's new","Latest news","Recent announcements","Updates","Latest updates"],
+        "darija": [
+          "L'actualité dyal FSBM","Achno l akhbar","Ach kayn jdid","Lkhbar dyal FSBM",
+          "Ach mn jdid","Wesh kayn 7aja jdida","Bghit n3ref achno wa9e3",
+          "Wach kayn announcement","Khbar jdid dyal FSBM","Achno wa9e3 daba",
+          "Cherche les news","9elleb 3la news"
+        ]
+      },
+      "responses": {
+        "darija": [
+          "📰 **Akhir lkhbar dyal FSBM :**\n\nAna n9der nl9a lik direct akhir annonces 3la fsbm.ma o Facebook ! 🔄\n\n💡 **Goul li bach n9elleb live :** \"9elleb 3la lkhbar\" wla \"Cherche les dernières news\"\n\n📅 **Mhammin daba (Mai 2026) :**\n\n• **Examens Session Juin 2026** : 1 → 25 Juin 2026 (calendrier détaillé f scolarité o portail)\n• **Candidatures Master IADS** : prolongées jusqu'au 15 Juin 2026\n• **Conférence inaugurale Master IA** : reportée au 29 Mai 2026 (Amphi B)\n• **Vacances printemps** : 28 Mars → 5 Avril 2026 (terminée)\n• **Forum Emploi FSBM 2026** : 8 Mai 2026, Hall principal (terminé — voir les recap photos sur Facebook)\n\n🎉 **Événements à venir :**\n• **Hackathon FSBM 2026** : 10-12 Avril 2026 (48h, thème IA & Santé)\n• **Gala fin d'année** : 25 Juin 2026 — Hôtel Sheraton Casablanca\n\n🌐 **Sources officielles :**\n• Site : www.fsbm.ma/news\n• Facebook : facebook.com/FSBMUH2C\n• Hadi platform : section /actualites\n\nBghiti li n9elleb 3la news live mn fsbm.ma ?"
+        ],
+        "fr": [
+          "📰 **Actualités FSBM :**\n\nJe peux chercher en direct sur fsbm.ma + notre base ! Dis : « Cherche les dernières news »\n\n📅 Daba (mai 2026) :\n• Examens Juin 2026 : 1-25 juin\n• Candidatures Master IADS prolongées au 15 juin\n• Conférence Master IA reportée au 29 mai\n• Hackathon FSBM 2026 : 10-12 avril (thème IA & Santé)\n• Gala fin d'année : 25 juin (Sheraton)\n\nSources : fsbm.ma/news · Facebook FSBMUH2C"
+        ],
+        "en": [
+          "📰 **FSBM News:**\n\nI can search live on fsbm.ma + our database! Try: « Search the latest news »\n\n📅 Current (May 2026):\n• June 2026 exams: June 1-25\n• Master IADS applications extended to June 15\n• AI Master Conference rescheduled to May 29\n• FSBM Hackathon 2026: April 10-12 (theme: AI & Health)\n• Year-end Gala: June 25 (Sheraton)\n\nSources: fsbm.ma/news · Facebook FSBMUH2C"
+        ]
+      }
+    },
+    {
+      "tag": "live_news",
+      "category": "general",
+      "icon": "🔄",
+      "patterns": {
+        "fr": ["Cherche les dernières news","Cherche les actualités en ligne","Que dit le site FSBM","Va chercher sur fsbm.ma","Cherche sur internet","Va chercher en ligne","Recherche live","Quoi de neuf sur le site","Cherche les dernières annonces"],
+        "en": ["Search latest news","Search online","Fetch FSBM news","Check the website","Search internet","Live search","What's new on the website","Get me the latest","Search the latest news please","Get the latest news","Fetch news from fsbm","Look up the latest","Find latest announcements","Show me the news"],
+        "darija": [
+          "9elleb 3la lkhbar","9elleb 3la akhir lkhbar","9elleb online",
+          "Mchi chouf f site","Jib lkhbar mn fsbm.ma","9elleb internet",
+          "Bghit lkhbar live","Sift dharbah f fsbm.ma","Cherche fsbm.ma daba",
+          "Wessel m3a fsbm bach tjib news","9elleb 3la facebook","Cherche Facebook",
+          "9elleb daba","Live news","Akhir lkhbar live"
+        ]
+      },
+      "responses": {
+        "fr": ["🔄 Je vais chercher en direct sur fsbm.ma/news + Facebook + notre base..."],
+        "en": ["🔄 Searching live on fsbm.ma/news + Facebook + local database..."],
+        "darija": ["🔄 Kanqelleb live f fsbm.ma/news + Facebook + base dyalna... Stanna 2 thawani..."]
+      },
+      "trigger_web_fetch": true
+    },
+    {
+      "tag": "ramadan_horaires",
+      "category": "general",
+      "icon": "🕌",
+      "patterns": {
+        "fr": ["Horaires Ramadan","Pendant le Ramadan","Cours Ramadan"],
+        "en": ["Ramadan schedule","During Ramadan","Ramadan hours"],
+        "darija": [
+          "Wach katbeddl horaires f Ramadan","F Ramadan kifash kaytt9aded cours",
+          "L7oraires dyal Ramadan","Wach exams kaynin f Ramadan","FSBM Ramadan",
+          "Wach scolarité katchghol Ramadan","Achno kaytsra Ramadan f FSBM"
+        ]
+      },
+      "responses": {
+        "darija": [
+          "🕌 **Ramadan f FSBM — kollchi 3la 7oraires :**\n\n**📚 Cours :**\n• Matin gher : **9:00 → 14:00** (en continu, sans pause déjeuner)\n• Lcoursat dyal 3achiya gher (après 14h) : kayit-fasdou\n• Durée dyal cours : kayb9a 1h30 ou 1h (3la 7sab module)\n\n**🏛️ Services administratifs :**\n• Scolarité, doyen, départements : **9:00 → 14:00**\n• Bibliothèque : **9:00 → 14:00** + parfois **20:00 → 22:00** après iftar\n• Resto Universitaire : **fermé pendant Ramadan** (ouvre f iftar f cités)\n\n**📝 Lexams :**\n• Ila kanou kant ssadafou m3a Ramadan : kayatkatabou ghi f matin (9:00-13:00)\n• Modalités kanat 7iyad ila kant student kayssoum (preuve médicale parfois drouriya)\n\n**📅 Annonces officielles :**\n• Toujours annoncées par décanat 2-3 semaines avant Ramadan\n• Affichage 3la panneaux + email envoyés a tous students\n• Page Facebook FSBM kayatkateb post officiel\n\n**💡 Conseils pour bien réussir Ramadan + études :**\n\n1. **Sommeil** : 6-7h la nuit + 1h sieste après iftar = drouri\n2. **Hydratation** : kthar dyal moi entre Iftar et Sour\n3. **Études** : kaynin 3 fortunate moments :\n   - **2h après iftar** (énergie maximale, jusqu'à 11h-12h)\n   - **Après Tarawih** (calme + concentration)\n   - **Avant Suhoor** (4h-6h, pour révision intense)\n4. **Évite trahnak / overload** : balance entre 3ibada o études\n5. **Cantine fac** : kanaina parfois iftar communal mzyan\n\n**🌙 Aïd :**\n• 1-2 jours de congé officiel\n• Annoncés via décret ministériel (1-2 jours avant)\n• Toujours annoncé par FSBM par email\n\n**📞 En cas de doute :** 05 22 70 46 71"
+        ],
+        "fr": [
+          "🕌 **Ramadan à la FSBM :**\n\n• **Cours** : 9h-14h (sans pause)\n• **Services administratifs** : 9h-14h\n• **Bibliothèque** : 9h-14h + parfois 20h-22h\n• **Resto U** : fermé (sauf iftar en cités)\n• **Examens** : matin uniquement\n\n💡 Annoncé 2-3 semaines avant par décanat (email + Facebook). Aïd : 1-2 jours de congé."
+        ],
+        "en": [
+          "🕌 **Ramadan at FSBM:**\n\n• **Classes:** 9:00-14:00 (continuous)\n• **Admin services:** 9-14\n• **Library:** 9-14 + sometimes 20-22\n• **Resto U:** closed (iftar in residences)\n• **Exams:** morning only\n\n💡 Announced 2-3 weeks ahead. Eid: 1-2 days off."
+        ]
+      }
+    },
+    {
+      "tag": "default",
+      "category": "general",
+      "icon": "❓",
+      "patterns": {"fr": [], "en": [], "darija": []},
+      "responses": {
+        "fr": [
+          "🤔 Je n'ai pas bien compris. Pouvez-vous reformuler ?",
+          "🤖 Essayez de poser votre question autrement. Vous pouvez aussi me demander : « cherche les dernières news ».",
+          "❓ Cette question dépasse mes connaissances. Contactez la scolarité au 05 22 70 46 71."
+        ],
+        "en": [
+          "🤔 I didn't quite understand. Could you rephrase?",
+          "🤖 Try asking your question differently. You can also say: « search latest news ».",
+          "❓ This question is beyond me. Contact admissions at +212 5 22 70 46 71."
+        ],
+        "darija": [
+          "🤔 Sma7li, ma fhmtch mzyan. Tabghi t3ed swali b chi tari9a okhra ?\n\n💡 Hadi shi mawadi3 li n9der n3awnek fihom :\n• Tassjil / inscription\n• L'filiyat o master\n• EDT o lexams\n• Stages o PFE\n• Lminha o bourses\n• Diploma o attestations\n• La vie d'étudiant\n• Resto, transport, logement\n\n9oli b clarté ach bghiti t3ref !",
+          "🤖 Wesh khoya, hadi mawadi3 ma3rfthach b zaffa. Jarreb tssewl b chi tari9a okhra wla 9oli liya :\n\n« 9elleb 3la lkhbar » → bach nl9a lik akhir news live mn fsbm.ma\n\n« Achno l'filiyat ? » → bach n3awd lik kollchi 3la filiyat\n\n« Kifash ntsajjel ? » → procedure dyal tassjil b tafassil\n\nWesh ach bghiti ?",
+          "❓ Hadshi makhdmnich, ma3rftch njawbek b clarté. 7awli :\n\n1. Reformuler swali b kalimat akhrin\n2. Sawalni 3la chi haja 9 nazila (filiyat, exams, stage...)\n3. Ila kanat soual complexe bzaf, ittasel m3a scolarité direct :\n   📞 05 22 70 46 71\n   📧 scolarite@fsbm.ac.ma\n\nAna hna ila bghiti tji b chi soual khor !"
+        ]
+      }
+    }
+  ]
+}

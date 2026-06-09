@@ -1,0 +1,40 @@
+# =============================================================================
+#  FSBM Platform — chatbot-service requirements
+#  Compatible Python 3.10 / 3.11 / 3.12 / 3.13
+# =============================================================================
+
+# Framework
+fastapi>=0.110.0
+uvicorn[standard]>=0.27.0
+pydantic>=2.6.0
+pydantic-settings>=2.2.0
+
+# HTTP client (pour appeler academic-service)
+httpx>=0.27.0
+
+# Web scraping (fsbm.ma/news + Facebook)
+beautifulsoup4>=4.12.0
+lxml>=5.0.0
+
+# LLM (Groq API — heberge LLaMA 3.3 gratuit)
+groq>=0.11.0
+
+# NLP
+scikit-learn>=1.4.0
+nltk>=3.8.1
+numpy>=1.26.0
+
+# Database
+sqlalchemy>=2.0.25
+aiomysql>=0.2.0
+pymysql>=1.1.0
+cryptography>=42.0.0
+
+# Config
+python-dotenv>=1.0.0
+python-multipart>=0.0.9
+
+# Dev tools
+pytest>=8.0.0
+pytest-asyncio>=0.23.0
+black>=24.0.0

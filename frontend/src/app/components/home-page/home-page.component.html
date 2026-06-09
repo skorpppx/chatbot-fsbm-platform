@@ -1,0 +1,39 @@
+<div style="min-height:100vh;display:flex;flex-direction:column;background:var(--gray-bg)">
+    <nav class="navbar">
+      <div class="navbar-brand">
+        <img src="assets/FSBM.png" alt="FSBM Logo" class="navbar-logo" />
+        <div class="navbar-title"><h1>Chatbot FSBM</h1><span>Assistant Intelligent</span></div>
+      </div>
+      <span class="navbar-badge">Université Hassan II</span>
+    </nav>
+    <div class="hero">
+      <div class="hero-logo-wrap"><img src="assets/FSBM.png" alt="FSBM" class="hero-logo" /></div>
+      <div class="hero-tag">✦ Faculté des Sciences Ben M'Sick</div>
+      <h2>Votre assistant<br />intelligent FSBM</h2>
+      <p class="subtitle">Posez vos questions sur les inscriptions, les filières, les examens et la vie universitaire — disponible 24h/24.</p>
+      <button class="start-chat-btn" (click)="startChat.emit()">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        Démarrer une conversation
+      </button>
+    </div>
+    <div class="stats-bar">
+      <div class="stat-item"><div class="stat-value">6+</div><div class="stat-label">Domaines couverts</div></div>
+      <div class="stat-item"><div class="stat-value">24/7</div><div class="stat-label">Disponibilité</div></div>
+      <div class="stat-item"><div class="stat-value">100%</div><div class="stat-label">Gratuit</div></div>
+      <div class="stat-item"><div class="stat-value">FR</div><div class="stat-label">En français</div></div>
+    </div>
+    <div class="features-section">
+      <p class="section-title">Ce que je peux faire pour vous</p>
+      <div class="features">
+        <div class="feature-card" *ngFor="let f of features">
+          <div class="feature-icon-wrap">{{ f.icon }}</div>
+          <div class="feature-text"><h3>{{ f.title }}</h3><p>{{ f.desc }}</p></div>
+        </div>
+      </div>
+    </div>
+    <footer class="page-footer" style="margin-top:auto">
+      <img src="assets/FSBM.png" alt="FSBM" class="footer-logo" />
+      <p>Projet PFE — Développé par AKRAM, Zakaria &amp; Nouhaila</p>
+      <p>Filière Développement Informatique — FSBM — 2025/2026</p>
+    </footer>
+  </div>
